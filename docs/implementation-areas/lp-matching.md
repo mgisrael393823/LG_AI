@@ -13,7 +13,7 @@ An intelligent matching system creating detailed LP profiles, scoring their pref
 The following diagram illustrates the intelligent workflow for identifying and matching limited partners with investment opportunities, emphasizing how machine learning enhances the process.
 
 <div class="diagram-container">
-  <img src="https://www.mermaidchart.com/raw/7dde97d9-fda2-4f42-a812-e96e078e11d5?theme=light&version=v0.1&format=svg" alt="LP Identification and Matching Flow Diagram" />
+  <img src="https://www.mermaidchart.com/raw/51201aee-9c5e-4adc-8489-9eadcf6bc027?theme=light&version=v0.1&format=svg" alt="LP Identification and Matching Flow Diagram" />
 </div>
 
 This system integrates CRM data with machine learning to create an intelligent matching process. The machine learning components continuously improve through feedback loops, learning from successful matches to refine future recommendations.
