@@ -22,92 +22,52 @@ Each diagram should be accompanied by a brief introduction and followed by expla
 
 # Enhanced Flowchart and Diagram Code
 
+# Simplified Mermaid Diagram Collection
+
 ## 1. LP Identification and Matching Flow
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#d0e0ff',
-    'primaryBorderColor': '#3080ff',
-    'primaryTextColor': '#333',
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'nodeBorder': '2px',
-    'nodeMargin': '12px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Pull LP data from CRM] --> A2[Normalize data fields]
-    A2 --> A3[Tag LPs with attributes]
-    A3 --> B1[Use ML to cluster LPs]
-    B1 --> B2[Generate predictive profiles]
-    B2 --> C1[Ingest new deals]
-    C1 --> C2[Rank compatibility]
-    C2 --> C3[Prioritize LP-deal pairs]
-    C3 --> D1[Teams review matches]
-    D1 --> D2[Confirm recommendations]
-    D2 --> D3[Feed decisions back to system]
-    D3 -.->|Continuous learning loop| B1
-    
-    classDef default fill:#d0e0ff,stroke:#3080ff,stroke-width:2px,color:#333,font-size:14px
-    classDef highlight fill:#b0d0ff,stroke:#2060cc,stroke-width:2px,color:#333,font-weight:bold
+    A1["Pull LP data from CRM"] --> A2["Normalize data fields"]
+    A2 --> A3["Tag LPs with attributes"]
+    A3 --> B1["Use ML to cluster LPs"]
+    B1 --> B2["Generate predictive profiles"]
+    B2 --> C1["Ingest new deals"]
+    C1 --> C2["Rank compatibility"]
+    C2 --> C3["Prioritize LP-deal pairs"]
+    C3 --> D1["Teams review matches"]
+    D1 --> D2["Confirm recommendations"]
+    D2 --> D3["Feed decisions back to system"]
+    D3 --> B1
+
+    classDef default fill:#d0e0ff,stroke:#3080ff,stroke-width:2px
+    classDef highlight fill:#b0d0ff,stroke:#2060cc,stroke-width:2px
     class B1,B2 highlight
-    
-    %% Caption text
-    subgraph caption [LP Identification and Matching Workflow]
-        direction LR
-        cap1[Data Collection and Normalization]
-        cap2[ML-Driven Analysis]
-        cap3[Deal Matching]
-        cap4[Human Oversight and Feedback Loop]
-        cap1 --- cap2 --- cap3 --- cap4
-        
-        classDef captionStyle fill:none,stroke:none,color:#666,font-style:italic
-        class caption,cap1,cap2,cap3,cap4 captionStyle
-    end
 ```
 
 ## 2. LP Clustering by Investment Preferences
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'lineWidth': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 graph TD
-    LP1[Pension Fund] --- LP2[Sovereign Wealth]
-    LP2 --- LP3[Insurance Co]
+    LP1["Pension Fund"] --- LP2["Sovereign Wealth"]
+    LP2 --- LP3["Insurance Co"]
     LP1 --- LP3
     
-    LP4[Family Office A] --- LP5[Family Office B]
-    LP5 --- LP6[HNWI Group]
+    LP4["Family Office A"] --- LP5["Family Office B"]
+    LP5 --- LP6["HNWI Group"]
     LP4 --- LP6
     
-    LP7[Opportunity Fund] --- LP8[Private Equity]
-    LP8 --- LP9[Venture Capital]
+    LP7["Opportunity Fund"] --- LP8["Private Equity"]
+    LP8 --- LP9["Venture Capital"]
     LP7 --- LP9
     
     LP3 --- LP4
     LP6 --- LP7
     
-    D1[Value-Add Multifamily]
-    D2[Core Office]
-    D3[Development JV]
-    D4[Opportunistic Retail]
+    D1["Value-Add Multifamily"]
+    D2["Core Office"]
+    D3["Development JV"]
+    D4["Opportunistic Retail"]
     
     LP1 --- D2
     LP2 --- D2
@@ -119,494 +79,234 @@ graph TD
     LP8 --- D4
     LP9 --- D4
     
-    classDef institutional fill:#c4e0ff,stroke:#0066cc,stroke-width:3px,color:#333,font-weight:bold
-    classDef family fill:#ffe0b3,stroke:#cc7700,stroke-width:3px,color:#333,font-weight:bold
-    classDef opportunity fill:#ffc2c2,stroke:#cc0000,stroke-width:3px,color:#333,font-weight:bold
-    classDef deals fill:#e0ffe0,stroke:#008800,stroke-width:2px,color:#333,font-weight:bold
+    classDef institutional fill:#c4e0ff,stroke:#0066cc
+    classDef family fill:#ffe0b3,stroke:#cc7700
+    classDef opportunity fill:#ffc2c2,stroke:#cc0000
+    classDef deals fill:#e0ffe0,stroke:#008800
     
     class LP1,LP2,LP3 institutional
     class LP4,LP5,LP6 family
     class LP7,LP8,LP9 opportunity
     class D1,D2,D3,D4 deals
-    
-    %% Legend
-    subgraph legend [Investor Categories]
-        direction LR
-        l1[Institutional Investors]
-        l2[Family Offices]
-        l3[Opportunity Investors]
-        l4[Deal Types]
-        
-        classDef legendInst fill:#c4e0ff,stroke:#0066cc,stroke-width:2px,color:#333
-        classDef legendFam fill:#ffe0b3,stroke:#cc7700,stroke-width:2px,color:#333  
-        classDef legendOpp fill:#ffc2c2,stroke:#cc0000,stroke-width:2px,color:#333
-        classDef legendDeal fill:#e0ffe0,stroke:#008800,stroke-width:2px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendInst
-        class l2 legendFam
-        class l3 legendOpp
-        class l4 legendDeal
-        class legend legendStyle
-    end
 ```
 
 ## 3. Deal Pipeline Management Process
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#e0f0f0',
-    'primaryBorderColor': '#2070a0',
-    'primaryTextColor': '#333',
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A[Aggregate deal data] --> B[Standardize attributes]
-    B --> C{Initial<br>Screening}
-    C -->|Meets criteria| D[Passes filter]
-    C -->|Fails criteria| F[Rejected]
-    D --> G[Score against LP preferences]
-    G --> H[Rank by strategic focus]
-    H --> I[Factor market growth]
-    I --> J[Dashboard with status]
-    J --> K[Track conversion rates]
+    A["Aggregate deal data"] --> B["Standardize attributes"]
+    B --> C{"Initial Screening"}
+    C -->|Meets criteria| D["Passes filter"]
+    C -->|Fails criteria| F["Rejected"]
+    D --> G["Score against LP preferences"]
+    G --> H["Rank by strategic focus"]
+    H --> I["Factor market growth"]
+    I --> J["Dashboard with status"]
+    J --> K["Track conversion rates"]
     
-    classDef default fill:#e0f0f0,stroke:#2070a0,stroke-width:2px,color:#333,font-size:14px
-    classDef decision fill:#ffe0e0,stroke:#c05050,stroke-width:3px,color:#333,font-weight:bold
-    classDef pass fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333
-    classDef fail fill:#ffe0e0,stroke:#c05050,stroke-width:2px,color:#333
-    
+    classDef default fill:#e0f0f0,stroke:#2070a0
+    classDef decision fill:#ffe0e0,stroke:#c05050
     class C decision
-    class D,G,H,I,J,K pass
-    class F fail
-    
-    %% Add labels for the pathway
-    subgraph positive [Positive Pathway]
-        direction LR
-        posLabel[Qualified Deal Processing]
-        
-        classDef pathStyle fill:none,stroke:none,color:#30a030,font-style:italic
-        class positive,posLabel pathStyle
-    end
-    
-    subgraph negative [Negative Pathway]
-        direction LR
-        negLabel[Disqualified Deals]
-        
-        classDef negPathStyle fill:none,stroke:none,color:#c05050,font-style:italic
-        class negative,negLabel negPathStyle
-    end
 ```
 
 ## 4. AI-Enhanced Financial Modeling Process
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Gather core assumptions] --> A2[Central data repository]
-    A2 --> A3[Consistent naming conventions]
-    A3 --> B1[Excel/Google templates]
-    B1 --> B2[Python financial models]
-    B2 --> B3[Sensitivity testing modules]
-    B3 --> C1[ML adjusts assumptions]
-    C1 --> C2[Based on historical data]
-    C2 --> C3[Based on market data]
-    C3 --> C4[Highlight discrepancies]
-    C4 --> D1[Git version control]
-    D1 --> D2[Track modifications]
-    D2 --> D3[Document overrides]
-    D3 -.->|ML Feedback Loop| C1
+    A1["Gather core assumptions"] --> A2["Central data repository"]
+    A2 --> A3["Consistent naming conventions"]
+    A3 --> B1["Excel/Google templates"]
+    B1 --> B2["Python financial models"]
+    B2 --> B3["Sensitivity testing modules"]
+    B3 --> C1["ML adjusts assumptions"]
+    C1 --> C2["Based on historical data"]
+    C2 --> C3["Based on market data"]
+    C3 --> C4["Highlight discrepancies"]
+    C4 --> D1["Git version control"]
+    D1 --> D2["Track modifications"]
+    D2 --> D3["Document overrides"]
+    D3 --> C1
     
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef models fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef ml fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef version fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef models fill:#e0ffe0,stroke:#30a030
+    classDef ml fill:#fff0e0,stroke:#e08030
+    classDef version fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3 data
     class B1,B2,B3 models
     class C1,C2,C3,C4 ml
     class D1,D2,D3 version
-    
-    %% Process stage labels
-    subgraph legend [Process Stages]
-        direction LR
-        l1[Data Collection]
-        l2[Financial Modeling]
-        l3[ML Enhancement]
-        l4[Version Control]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendModels fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendML fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendVC fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendModels
-        class l3 legendML
-        class l4 legendVC
-        class legend legendStyle
-    end
 ```
 
 ## 5. Investor Relationship Management Process
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Connect CRM to email] --> A2[Create email campaigns]
-    A2 --> A3[Trigger milestone emails]
-    A3 --> B1[NLG for tailored updates]
-    B1 --> B2[Based on preferences]
-    B2 --> B3[Based on past interactions]
-    B3 --> B4[Score engagement]
-    B4 --> C1{ML evaluates<br>responses}
-    C1 -->|High potential| C2[Identify high-potential LPs]
-    C1 -->|At risk| C3[Identify at-risk LPs]
-    C2 --> C4[CRM recommended steps]
+    A1["Connect CRM to email"] --> A2["Create email campaigns"]
+    A2 --> A3["Trigger milestone emails"]
+    A3 --> B1["NLG for tailored updates"]
+    B1 --> B2["Based on preferences"]
+    B2 --> B3["Based on past interactions"]
+    B3 --> B4["Score engagement"]
+    B4 --> C1["ML evaluates responses"]
+    C1 --> C2["Identify high-potential LPs"]
+    C1 --> C3["Identify at-risk LPs"]
+    C2 --> C4["CRM recommended steps"]
     C3 --> C4
-    C4 --> D1[Collect feedback]
-    D1 --> D2[Collect project feedback]
-    D2 --> D3[Refine communication]
-    D3 --> D4[Refine message templates]
-    D4 -.->|Template<br>refinement| A2
-    D4 -.->|Content<br>refinement| B1
+    C4 --> D1["Collect feedback"]
+    D1 --> D2["Collect project feedback"]
+    D2 --> D3["Refine communication"]
+    D3 --> D4["Refine message templates"]
+    D4 --> A2
+    D4 --> B1
     
-    classDef comms fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef tailoring fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef feedback fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef decision fill:#ffe0e0,stroke:#c05050,stroke-width:3px,color:#333,font-weight:bold
+    classDef comms fill:#e0f0ff,stroke:#3080e0
+    classDef tailoring fill:#e0ffe0,stroke:#30a030
+    classDef analysis fill:#fff0e0,stroke:#e08030
+    classDef feedback fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3 comms
     class B1,B2,B3,B4 tailoring
     class C1,C2,C3,C4 analysis
     class D1,D2,D3,D4 feedback
-    class C1 decision
-    
-    %% Process stage labels
-    subgraph legend [Process Components]
-        direction LR
-        l1[Communication System]
-        l2[Content Personalization]
-        l3[Response Analysis]
-        l4[Feedback Loop]
-        
-        classDef legendComms fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendTailor fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendAnalysis fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendFeedback fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendComms
-        class l2 legendTailor
-        class l3 legendAnalysis
-        class l4 legendFeedback
-        class legend legendStyle
-    end
 ```
 
 ## 6. AI-Powered Asset Management Process
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Integrate property software] --> A2[Capture leasing data]
-    A2 --> A3[Dashboard for portfolio]
+    A1["Integrate property software"] --> A2["Capture leasing data"]
+    A2 --> A3["Dashboard for portfolio"]
+    A3 --> B1["Deploy IoT sensors"]
+    B1 --> B2["Track building systems"]
+    B2 --> B3["ML predicts failures"]
+    B3 --> B4["Schedule maintenance"]
+    A3 --> C1["Analyze usage patterns"]
+    C1 --> C2["Analyze service requests"]
+    C2 --> C3["Analyze renewal rates"]
+    C3 --> C4["AI recommends strategies"]
+    C4 --> C5["Tenant programs"]
+    A3 --> D1["Set metric thresholds"]
+    D1 --> D2["Trigger alerts"]
+    D2 --> D3["Recommend actions"]
+    D3 --> D4["Track resolution"]
+    B4 --> A3
+    C5 --> A3
+    D4 --> A3
     
-    %% Branch 1 - Maintenance
-    A3 --> B1[Deploy IoT sensors]
-    B1 --> B2[Track building systems]
-    B2 --> B3[ML predicts failures]
-    B3 --> B4[Schedule maintenance]
-    B4 -.->|Status update| A3
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef maintenance fill:#e0ffe0,stroke:#30a030
+    classDef analysis fill:#fff0e0,stroke:#e08030
+    classDef alerts fill:#f0e0ff,stroke:#8030e0
     
-    %% Branch 2 - Tenant Analysis
-    A3 --> C1[Analyze usage patterns]
-    C1 --> C2[Analyze service requests]
-    C2 --> C3[Analyze renewal rates]
-    C3 --> C4[AI recommends strategies]
-    C4 --> C5[Tenant programs]
-    C5 -.->|Program<br>results| A3
-    
-    %% Branch 3 - Alerts
-    A3 --> D1[Set metric thresholds]
-    D1 --> D2[Trigger alerts]
-    D2 --> D3[Recommend actions]
-    D3 --> D4[Track resolution]
-    D4 -.->|Resolution<br>status| A3
-    
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef maintenance fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef alerts fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef central fill:#c0e0ff,stroke:#3080e0,stroke-width:3px,color:#333,font-weight:bold
-    
-    class A1,A2 data
-    class A3 central
+    class A1,A2,A3 data
     class B1,B2,B3,B4 maintenance
     class C1,C2,C3,C4,C5 analysis
     class D1,D2,D3,D4 alerts
-    
-    %% Branch labels
-    subgraph legend [Operational Components]
-        direction LR
-        l1[Data Integration]
-        l2[Predictive Maintenance]
-        l3[Tenant Analysis]
-        l4[Alert System]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendMaint fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendAnalysis fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendAlerts fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendMaint
-        class l3 legendAnalysis
-        class l4 legendAlerts
-        class legend legendStyle
-    end
 ```
 
 ## 7. AI-Enhanced Investor Reporting Process
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    %% Data aggregation
-    A1[Aggregate financials] --> A2[Aggregate market stats]
-    A2 --> A3[Aggregate operational data]
-    A3 --> A4[Data warehouse storage]
-    A4 --> A5[Automated pipelines]
-    
-    %% Report generation
-    A5 --> B1[Standardized templates]
-    B1 --> B2[NLG drafts narratives]
-    B2 --> B3[Market outlook content]
-    B3 --> B4[Portfolio updates]
-    B4 --> B5[Final reports]
-    
-    %% Delivery platform
-    B5 --> C1[Online portals for LPs]
-    C1 --> C2[Real-time KPIs]
-    C2 --> C3[Customizable views]
-    C3 --> C4[Project/portfolio views]
-    
-    %% Personalization and analytics
-    C4 --> D1[Personalized highlights]
-    D1 --> D2[Track usage metrics]
-    D2 --> D3[Identify engaged investors]
-    D2 --> D4[Identify non-engaged investors]
-    D3 --> D5[Tailor communications]
+    A1["Aggregate financials"] --> A2["Aggregate market stats"]
+    A2 --> A3["Aggregate operational data"]
+    A3 --> A4["Data warehouse storage"]
+    A4 --> A5["Automated pipelines"]
+    A5 --> B1["Standardized templates"]
+    B1 --> B2["NLG drafts narratives"]
+    B2 --> B3["Market outlook content"]
+    B3 --> B4["Portfolio updates"]
+    B4 --> B5["Final reports"]
+    B5 --> C1["Online portals for LPs"]
+    C1 --> C2["Real-time KPIs"]
+    C2 --> C3["Customizable views"]
+    C3 --> C4["Project/portfolio views"]
+    C4 --> D1["Personalized highlights"]
+    D1 --> D2["Track usage metrics"]
+    D2 --> D3["Identify engaged investors"]
+    D2 --> D4["Identify non-engaged investors"]
+    D3 --> D5["Tailor communications"]
     D4 --> D5
-    D5 -.->|Content<br>optimization| B2
+    D5 --> B2
     
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef reports fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef portals fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef reports fill:#e0ffe0,stroke:#30a030
+    classDef portals fill:#fff0e0,stroke:#e08030
+    classDef analysis fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3,A4,A5 data
     class B1,B2,B3,B4,B5 reports
     class C1,C2,C3,C4 portals
     class D1,D2,D3,D4,D5 analysis
-    
-    %% Process stage labels
-    subgraph legend [Process Components]
-        direction LR
-        l1[Data Aggregation]
-        l2[Report Generation]
-        l3[Delivery Platform]
-        l4[Analytics & Personalization]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendReports fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendPortals fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendAnalysis fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendReports
-        class l3 legendPortals
-        class l4 legendAnalysis
-        class legend legendStyle
-    end
 ```
 
 ## 8. AI Implementation Roadmap Timeline
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333'
-  }
-}}%%
 gantt
     title AI Implementation Roadmap
     dateFormat YYYY-MM-DD
-    axisFormat %b %y
     
     section Immediate (90 Days)
-    Technology Audit           :immediate, a1, 2025-03-19, 30d
-    Standardize LP Data        :immediate, a2, after a1, 30d
-    Data Governance Framework  :immediate, a3, after a1, 45d
+    Technology Audit           :a1, 2025-03-19, 30d
+    Standardize LP Data        :a2, after a1, 30d
+    Data Governance Framework  :a3, after a1, 45d
     
     section Medium-Term (3-6 Months)
-    LP Matching Platform       :medium, b1, after a2, 60d
-    Market Analytics Dashboards:medium, b2, after a3, 45d
-    AI-Driven Financial Models :medium, b3, after a3, 60d
+    LP Matching Platform       :b1, after a2, 60d
+    Market Analytics Dashboards:b2, after a3, 45d
+    AI-Driven Financial Models :b3, after a3, 60d
     
     section Long-Term (6-12 Months)
-    Unified Decision Support   :long, c1, after b1, 90d
-    IoT Predictive Maintenance :long, c2, after b2, 120d
-    Interactive Investor Portals:long, c3, after b3, 75d
+    Unified Decision Support   :c1, after b1, 90d
+    IoT Predictive Maintenance :c2, after b2, 120d
+    Interactive Investor Portals:c3, after b3, 75d
     
     section Ongoing
-    Team Training              :ongoing, d1, 2025-03-19, 180d
-    RACI Implementation        :ongoing, d2, after a3, 45d
-    Data Quality Initiatives   :ongoing, d3, after a3, 90d
-    KPI Tracking & Refinement  :ongoing, d4, after b1, 180d
-    
-    %% Milestone markers
-    section Milestones
-    Phase 1 Complete          :milestone, m1, 2025-06-18, 0d
-    Phase 2 Complete          :milestone, m2, 2025-09-17, 0d
-    Phase 3 Complete          :milestone, m3, 2026-01-15, 0d
-    
-    %% Custom styling with CSS classes
-    classDef immediate fill:#4472C4,stroke:#2060a0,color:white
-    classDef medium fill:#ED7D31,stroke:#c05020,color:white
-    classDef long fill:#70AD47,stroke:#508030,color:white
-    classDef ongoing fill:#7030A0,stroke:#50207A,color:white
-    classDef milestone fill:#000000,stroke:#000000,color:white
+    Team Training              :d1, 2025-03-19, 180d
+    RACI Implementation        :d2, after a3, 45d
+    Data Quality Initiatives   :d3, after a3, 90d
+    KPI Tracking & Refinement  :d4, after b1, 180d
 ```
 
-## CSS for Responsive Sizing
+## Usage Guidelines
 
-```css
-/* Apply to all diagram containers */
-.mermaid-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
-  width: 100%;
-}
+1. **Basic HTML Implementation**:
+   ```html
+   <div class="mermaid">
+     <!-- Insert diagram code here -->
+   </div>
+   ```
 
-/* LP Identification and Matching Flow */
-.lp-matching-diagram .mermaid {
-  width: 85%;
-  max-width: 900px;
-}
+2. **Include the Mermaid Library**:
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+   <script>
+     mermaid.initialize({
+       startOnLoad: true,
+       theme: 'default',
+       securityLevel: 'loose'
+     });
+   </script>
+   ```
 
-/* LP Clustering by Investment Preferences */
-.lp-clustering-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
+3. **Basic CSS Styling**:
+   ```css
+   .mermaid {
+     display: flex;
+     justify-content: center;
+     margin: 2rem auto;
+     max-width: 100%;
+     overflow-x: auto;
+   }
+   ```
 
-/* Deal Pipeline Management Process */
-.deal-pipeline-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
+4. **Troubleshooting**:
+   - If diagrams don't render, check browser console for errors
+   - Avoid complex init configurations
+   - Use double quotes for text attributes
+   - Keep node labels simple
+   - Test each diagram separately before combining
 
-/* AI-Enhanced Financial Modeling Process */
-.financial-modeling-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
-
-/* Investor Relationship Management Process */
-.investor-relationship-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
-
-/* AI-Powered Asset Management Process */
-.asset-management-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
-
-/* AI-Enhanced Investor Reporting Process */
-.investor-reporting-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
-
-/* AI Implementation Roadmap Timeline */
-.implementation-timeline-diagram .mermaid {
-  width: 95%;
-  max-width: 1100px;
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-  .mermaid-wrapper .mermaid {
-    width: 100% !important;
-  }
-}
-```
-
+These simplified diagrams remove complex initialization settings and advanced styling that might cause rendering issues while maintaining the essential visual information.
