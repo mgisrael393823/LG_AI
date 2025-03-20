@@ -1,3 +1,25 @@
+## Implementation Placement Guide
+
+For optimal effect when implementing these diagrams:
+
+1. **LP Identification and Matching Flow**: Position directly after the "Enhanced State Capabilities" section.
+
+2. **LP Clustering by Investment Preferences**: Place under a new "LP Classification Analysis" subheading.
+
+3. **Deal Pipeline Management Process**: Featured prominently at the top of the Deal Pipeline section.
+
+4. **AI-Enhanced Financial Modeling Process**: After the introduction in the Financial Modeling section.
+
+5. **Investor Relationship Management Process**: After the capabilities section in the Investor Management section.
+
+6. **AI-Powered Asset Management Process**: In a new dedicated Asset Management section.
+
+7. **AI-Enhanced Investor Reporting Process**: In a new dedicated Investor Reporting section.
+
+8. **AI Implementation Roadmap Timeline**: Featured prominently on the Timeline page.
+
+Each diagram should be accompanied by a brief introduction and followed by explanatory text that details the components and their interactions.
+
 # Enhanced Flowchart and Diagram Code
 
 ## 1. LP Identification and Matching Flow
@@ -588,24 +610,3 @@ gantt
 }
 ```
 
-## Implementation Placement Guide
-
-For optimal effect when implementing these diagrams:
-
-1. **LP Identification and Matching Flow**: Position directly after the "Enhanced State Capabilities" section.
-
-2. **LP Clustering by Investment Preferences**: Place under a new "LP Classification Analysis" subheading.
-
-3. **Deal Pipeline Management Process**: Featured prominently at the top of the Deal Pipeline section.
-
-4. **AI-Enhanced Financial Modeling Process**: After the introduction in the Financial Modeling section.
-
-5. **Investor Relationship Management Process**: After the capabilities section in the Investor Management section.
-
-6. **AI-Powered Asset Management Process**: In a new dedicated Asset Management section.
-
-7. **AI-Enhanced Investor Reporting Process**: In a new dedicated Investor Reporting section.
-
-8. **AI Implementation Roadmap Timeline**: Featured prominently on the Timeline page.
-
-Each diagram should be accompanied by a brief introduction and followed by explanatory text that details the components and their interactions.
