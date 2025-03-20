@@ -16,7 +16,6 @@ Advanced reporting platform with automated data aggregation, AI-generated narrat
 
 The following diagram illustrates the comprehensive workflow for AI-enhanced investor reporting, showing how data is transformed into personalized investor communications.
 
-<div class="mermaid">
 ```mermaid
 flowchart TD
     A1["Aggregate financials"] --> A2["Aggregate market stats"]
@@ -50,7 +49,6 @@ flowchart TD
     class C1,C2,C3,C4 portals
     class D1,D2,D3,D4,D5 analysis
 ```
-</div>
 
 This diagram illustrates the end-to-end process for AI-enhanced investor reporting. It begins with comprehensive data aggregation from financial, market, and operational sources into a centralized data warehouse with automated processing pipelines. The report generation phase leverages natural language generation (NLG) to create narrative content and standardized reports. These are delivered through interactive online portals that provide real-time KPIs and customizable views. The final phase analyzes investor engagement with reports to identify both highly engaged and disengaged investors, allowing for tailored communications. A continuous feedback loop optimizes content generation based on engagement metrics, ensuring reports become increasingly relevant to each investor's interests.
 

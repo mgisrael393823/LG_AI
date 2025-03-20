@@ -12,7 +12,6 @@ Advanced communication system with automated triggers, personalized content gene
 
 The following diagram illustrates the integrated approach to investor relationship management, with AI-powered personalization and continuous improvement.
 
-<div class="mermaid">
 ```mermaid
 flowchart TD
     A1["Connect CRM to email"] --> A2["Create email campaigns"]
@@ -43,7 +42,6 @@ flowchart TD
     class C1,C2,C3,C4 analysis
     class D1,D2,D3,D4 feedback
 ```
-</div>
 
 This comprehensive workflow demonstrates how AI enhances investor relationship management. Starting with a connected CRM system, the process leverages natural language generation to create personalized communications based on investor preferences and past interactions. Machine learning analyzes responses to identify both high-potential and at-risk LPs, recommending appropriate follow-up actions. The entire system continuously improves through feedback loops that refine both templates and content generation algorithms.
 

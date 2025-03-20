@@ -12,7 +12,6 @@ Advanced system with standardized templates, scenario analysis capabilities, and
 
 The following diagram illustrates how AI and machine learning enhance the financial modeling process, providing more accurate projections and continuous improvement.
 
-<div class="mermaid">
 ```mermaid
 flowchart TD
     A1["Gather core assumptions"] --> A2["Central data repository"]
@@ -39,7 +38,6 @@ flowchart TD
     class C1,C2,C3,C4 ml
     class D1,D2,D3 version
 ```
-</div>
 
 This diagram shows the complete financial modeling process enhanced by AI. Starting with standardized data collection and storage, the workflow progresses through model development and then leverages machine learning to refine assumptions based on historical and market data. The integrated feedback loop continuously improves model accuracy over time, while version control ensures all changes are tracked and documented.
 
