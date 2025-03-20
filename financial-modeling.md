@@ -10,42 +10,35 @@ Advanced system with standardized templates, scenario analysis capabilities, and
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>Initialize Financial Model</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Choose Model Template</FlowNode>
-  
-  <!-- Input Phase -->
-  <FlowNode x="200" y="250" type="accent">Import Historical Data</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Set Market Parameters</FlowNode>
-  
-  <!-- Analysis Phase -->
-  <FlowNode x="200" y="350" type="secondary">Generate Scenarios</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Run Sensitivity Tests</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Assess Risk Factors</FlowNode>
-  
-  <!-- Validation Phase -->
-  <FlowNode x="400" y="450" type="accent">Meets Return Targets?</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Revise Assumptions</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Create Investment Report</FlowNode>
-  
-  <!-- Output Phase -->
-  <FlowNode x="400" y="650" type="primary">Distribute to Stakeholders</FlowNode>
-  
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+```mermaid
+graph TD
+    A1[Gather Assumptions] --> A2[Store in Repository]
+    A2 --> A3[Standardize Naming]
+    A3 --> B1[Create Model Templates]
+    B1 --> B2[Build Python Models]
+    B2 --> B3[Add Sensitivity Testing]
+    B3 --> C1[ML Adjusts Assumptions]
+    C1 --> C2[Analyze Historical Data]
+    C2 --> C3[Incorporate Market Data]
+    C3 --> C4[Highlight Discrepancies]
+    C4 --> D1[Version Control]
+    D1 --> D2[Track All Changes]
+    D2 --> D3[Document Overrides]
+    
+    style A1 fill:#e6f3ff,stroke:#0066cc
+    style A2 fill:#e6f3ff,stroke:#0066cc
+    style A3 fill:#e6f3ff,stroke:#0066cc
+    style B1 fill:#e6ffe6,stroke:#006600
+    style B2 fill:#e6ffe6,stroke:#006600
+    style B3 fill:#e6ffe6,stroke:#006600
+    style C1 fill:#fff0e6,stroke:#cc6600
+    style C2 fill:#fff0e6,stroke:#cc6600
+    style C3 fill:#fff0e6,stroke:#cc6600
+    style C4 fill:#fff0e6,stroke:#cc6600
+    style D1 fill:#f0e6ff,stroke:#6600cc
+    style D2 fill:#f0e6ff,stroke:#6600cc
+    style D3 fill:#f0e6ff,stroke:#6600cc
+```
 
 ## Strategic Implementation Framework
 

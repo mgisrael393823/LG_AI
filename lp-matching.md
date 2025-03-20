@@ -8,6 +8,115 @@ Manual profiling and CRM tracking of 10-20 targeted LPs with inconsistent data c
 
 An intelligent matching system creating detailed LP profiles, scoring their preferences, and automatically matching them with suitable investment opportunities using sophisticated predictive algorithms.
 
+## Process Flow Diagram
+
+<div class="process-flow">
+  <div class="process-step start">LP Matching Process START</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step data">Collect LP Data</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Create LP Profile</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Enrich Profile with Historical Data</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Generate Preference Score Matrix</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step data">Collect Deal Data</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Create Deal Profile</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Run Matching Algorithm</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Rank LP-Deal Matches by Score</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">Display Top Matches with Rationale</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-decision">Match Score > Threshold?</div>
+  <div class="process-flow-branches">
+    <div class="process-branch">
+      <div class="process-arrow">Yes ↓</div>
+      <div class="process-step">Notify Investment Team</div>
+      <div class="process-arrow">↓</div>
+      <div class="process-step">Present to LP</div>
+      <div class="process-arrow">↓</div>
+      <div class="process-decision">LP Interested?</div>
+      <div class="process-flow-branches">
+        <div class="process-branch">
+          <div class="process-arrow">Yes ↓</div>
+          <div class="process-step">Initiate Deal Process</div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step end">PROCESS END</div>
+        </div>
+        <div class="process-branch">
+          <div class="process-arrow">No ↓</div>
+          <div class="process-step">Capture Feedback</div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">Adjust LP Preferences</div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">Refine Algorithm</div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step end">PROCESS END</div>
+        </div>
+      </div>
+    </div>
+    <div class="process-branch">
+      <div class="process-arrow">No ↓</div>
+      <div class="process-step">Store for Later Review</div>
+      <div class="process-arrow">↓</div>
+      <div class="process-step">Refine Algorithm</div>
+      <div class="process-arrow">↓</div>
+      <div class="process-step end">PROCESS END</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.process-flow {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+.process-step {
+  background-color: #e6f3ff;
+  border: 1px solid #0066cc;
+  border-radius: 8px;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+}
+.process-step.start, .process-step.end {
+  background-color: #f9f9ff;
+  border: 2px solid #0000ff;
+  font-weight: bold;
+}
+.process-step.data {
+  background-color: #e6f3ff;
+  border: 1px solid #0066cc;
+}
+.process-decision {
+  background-color: #fff8e0;
+  border: 1px solid #ffa500;
+  border-radius: 8px;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+}
+.process-arrow {
+  color: #666;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.process-flow-branches {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.process-branch {
+  flex: 1;
+}
+</style>
+
 
 ## Strategic Implementation Framework
 

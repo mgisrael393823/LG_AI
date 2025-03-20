@@ -10,42 +10,26 @@ Advanced deal screening engine that scores opportunities against multiple LP pro
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>New Deal Submission</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Extract & Validate Deal Data</FlowNode>
-  
-  <!-- Analysis Phase -->
-  <FlowNode x="200" y="250" type="accent">Market Performance Analysis</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Financial Returns Assessment</FlowNode>
-  
-  <!-- Scoring Phase -->
-  <FlowNode x="200" y="350" type="secondary">Risk Factor Analysis</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Calculate Deal Score</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Match with LP Criteria</FlowNode>
-  
-  <!-- Decision Phase -->
-  <FlowNode x="400" y="450" type="accent">Meets Investment Criteria?</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Move to Archive</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Advance to Due Diligence</FlowNode>
-  
-  <!-- Outcome Phase -->
-  <FlowNode x="400" y="650" type="primary">Refine Scoring Model</FlowNode>
-  
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+```mermaid
+flowchart TD
+    A[Deals Sourced] --> B[Aggregate Deal Data]
+    B --> C[Standardize Deal Attributes]
+    C --> D{Initial Screening}
+    D -->|Meets Criteria| E[Passes Initial Filter]
+    D -->|Doesn't Meet| F[Rejected]
+    F --> G[Excluded from Pipeline]
+    E --> H[Score Against LP Preferences]
+    H --> I[Rank by Strategic Focus]
+    I --> J[Factor Market Growth]
+    J --> K[Dashboard with Status]
+    K --> L[Track Conversion Rates]
+    L --> M[Advanced Due Diligence]
+    
+    style A fill:#f5f5f5,stroke:#666,stroke-width:1px,stroke-dasharray: 5 5
+    style G fill:#f5f5f5,stroke:#666,stroke-width:1px,stroke-dasharray: 5 5
+    style M fill:#f5f5f5,stroke:#666,stroke-width:1px,stroke-dasharray: 5 5
+    style D fill:#ffeeee,stroke:#cc0000,stroke-width:1px
+```
 
 ## Strategic Implementation Framework
 

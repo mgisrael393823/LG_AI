@@ -10,42 +10,122 @@ Advanced system with standardized templates, scenario analysis capabilities, and
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>Initialize Financial Model</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Choose Model Template</FlowNode>
+<table class="financial-model-table">
+  <tr>
+    <th class="phase-header phase1">Assumptions</th>
+    <th class="phase-header phase2">Model Development</th>
+    <th class="phase-header phase3">ML Enhancement</th>
+    <th class="phase-header phase4">Documentation</th>
+  </tr>
+  <tr>
+    <td class="phase-cell phase1">Gather Assumptions</td>
+    <td class="phase-cell phase2">Create Model Templates</td>
+    <td class="phase-cell phase3">ML Adjusts Assumptions</td>
+    <td class="phase-cell phase4">Version Control</td>
+  </tr>
+  <tr>
+    <td class="phase-cell phase1">Store in Repository</td>
+    <td class="phase-cell phase2">Build Python Models</td>
+    <td class="phase-cell phase3">Analyze Historical Data</td>
+    <td class="phase-cell phase4">Track All Changes</td>
+  </tr>
+  <tr>
+    <td class="phase-cell phase1">Standardize Naming</td>
+    <td class="phase-cell phase2">Add Sensitivity Testing</td>
+    <td class="phase-cell phase3">Incorporate Market Data</td>
+    <td class="phase-cell phase4">Document Overrides</td>
+  </tr>
+  <tr>
+    <td class="phase-cell"></td>
+    <td class="phase-cell"></td>
+    <td class="phase-cell phase3">Highlight Discrepancies</td>
+    <td class="phase-cell"></td>
+  </tr>
+</table>
+
+<div class="model-flow-caption">
+  Financial Modeling Process - From Data Collection to Documentation
+</div>
+
+<style>
+.financial-model-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.phase-header {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.phase-cell {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 50px;
+}
+
+.phase1 {
+  background-color: #e6f3ff;
+}
+
+.phase-header.phase1 {
+  background-color: #d6e9ff;
+  border-bottom: 2px solid #0066cc;
+}
+
+.phase2 {
+  background-color: #e6ffe6;
+}
+
+.phase-header.phase2 {
+  background-color: #d6ffd6;
+  border-bottom: 2px solid #006600;
+}
+
+.phase3 {
+  background-color: #fff0e6;
+}
+
+.phase-header.phase3 {
+  background-color: #ffe6d1;
+  border-bottom: 2px solid #cc6600;
+}
+
+.phase4 {
+  background-color: #f0e6ff;
+}
+
+.phase-header.phase4 {
+  background-color: #e6d6ff;
+  border-bottom: 2px solid #6600cc;
+}
+
+.model-flow-caption {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .financial-model-table {
+    font-size: 0.9rem;
+  }
   
-  <!-- Input Phase -->
-  <FlowNode x="200" y="250" type="accent">Import Historical Data</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Set Market Parameters</FlowNode>
-  
-  <!-- Analysis Phase -->
-  <FlowNode x="200" y="350" type="secondary">Generate Scenarios</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Run Sensitivity Tests</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Assess Risk Factors</FlowNode>
-  
-  <!-- Validation Phase -->
-  <FlowNode x="400" y="450" type="accent">Meets Return Targets?</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Revise Assumptions</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Create Investment Report</FlowNode>
-  
-  <!-- Output Phase -->
-  <FlowNode x="400" y="650" type="primary">Distribute to Stakeholders</FlowNode>
-  
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+  .phase-cell {
+    padding: 8px;
+  }
+}
+</style>
 
 ## Strategic Implementation Framework
 

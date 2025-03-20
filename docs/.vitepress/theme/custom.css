@@ -1,0 +1,63 @@
+/* .vitepress/theme/custom.css */
+.language-mermaid {
+  background-color: transparent !important;
+  margin: 2rem 0;
+  padding: 0 !important;
+  overflow: auto;
+}
+
+.language-mermaid pre {
+  background-color: transparent !important;
+  text-align: center;
+}
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+}
+
+/* Process Flow Diagram Styles */
+.process-flow {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+.process-step {
+  background-color: #e6f3ff;
+  border: 1px solid #0066cc;
+  border-radius: 8px;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+}
+.process-step.start, .process-step.end {
+  background-color: #f9f9ff;
+  border: 2px solid #0000ff;
+  font-weight: bold;
+}
+.process-step.data {
+  background-color: #e6f3ff;
+  border: 1px solid #0066cc;
+}
+.process-decision {
+  background-color: #fff8e0;
+  border: 1px solid #ffa500;
+  border-radius: 8px;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+}
+.process-arrow {
+  color: #666;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.process-flow-branches {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.process-branch {
+  flex: 1;
+}

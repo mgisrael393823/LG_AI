@@ -10,42 +10,159 @@ Advanced communication system with automated triggers, personalized content gene
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>LP Communication Hub</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Profile Analysis</FlowNode>
+<div class="investor-process">
+  <div class="process-phase setup-phase">
+    <h4>Setup Phase</h4>
+    <ul class="step-list">
+      <li class="process-step">Connect CRM to Email</li>
+      <li class="process-step">Set Up Campaigns</li>
+      <li class="process-step">Configure Triggers</li>
+    </ul>
+  </div>
   
-  <!-- Communication Phase -->
-  <FlowNode x="200" y="250" type="accent">Content Generation</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Channel Selection</FlowNode>
+  <div class="phase-arrow">↓</div>
   
-  <!-- Engagement Phase -->
-  <FlowNode x="200" y="350" type="secondary">Track Interactions</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Score Engagement</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Optimize Timing</FlowNode>
+  <div class="process-phase content-phase">
+    <h4>Content Phase</h4>
+    <ul class="step-list">
+      <li class="process-step">Deploy Content Engine</li>
+      <li class="process-step">Apply LP Preferences</li>
+      <li class="process-step">Analyze Past Interactions</li>
+      <li class="process-step">Score Engagement</li>
+    </ul>
+  </div>
   
-  <!-- Analysis Phase -->
-  <FlowNode x="400" y="450" type="accent">Review Performance</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Adjust Strategy</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Generate Insights</FlowNode>
+  <div class="phase-arrow">↓</div>
   
-  <!-- Outcome Phase -->
-  <FlowNode x="400" y="650" type="primary">Update LP Profiles</FlowNode>
+  <div class="process-phase analysis-phase">
+    <h4>Analysis Phase</h4>
+    <ul class="step-list">
+      <li class="process-step">Evaluate Response Patterns</li>
+      <li class="dual-steps">
+        <span class="process-step small-step">Identify Priority LPs</span>
+        <span class="process-step small-step">Identify At-Risk LPs</span>
+      </li>
+      <li class="process-step">Suggest Next Actions</li>
+    </ul>
+  </div>
   
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+  <div class="phase-arrow">↓</div>
+  
+  <div class="process-phase feedback-phase">
+    <h4>Feedback Phase</h4>
+    <ul class="step-list">
+      <li class="process-step">Gather Feedback</li>
+      <li class="process-step">Record Project Feedback</li>
+      <li class="process-step">Refine Communications</li>
+      <li class="process-step">Update Templates</li>
+    </ul>
+  </div>
+  
+  <div class="feedback-loop">⟲ Continuous Improvement Loop: Feedback drives refinements to campaigns and content</div>
+</div>
+
+<style>
+.investor-process {
+  max-width: 650px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.process-phase {
+  padding: 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.process-phase h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 8px;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.process-step {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.dual-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.small-step {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.phase-arrow {
+  text-align: center;
+  font-size: 20px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.feedback-loop {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px dashed #999;
+  border-radius: 20px;
+  font-style: italic;
+  color: #666;
+}
+
+.setup-phase {
+  background-color: #e6f3ff;
+}
+
+.setup-phase .process-step {
+  border-left: 3px solid #0066cc;
+}
+
+.content-phase {
+  background-color: #e6ffe6;
+}
+
+.content-phase .process-step {
+  border-left: 3px solid #006600;
+}
+
+.analysis-phase {
+  background-color: #fff0e6;
+}
+
+.analysis-phase .process-step {
+  border-left: 3px solid #cc6600;
+}
+
+.feedback-phase {
+  background-color: #f0e6ff;
+}
+
+.feedback-phase .process-step {
+  border-left: 3px solid #6600cc;
+}
+</style>
 
 ## Strategic Implementation Framework
 

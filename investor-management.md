@@ -10,42 +10,42 @@ Advanced communication system with automated triggers, personalized content gene
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>LP Communication Hub</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Profile Analysis</FlowNode>
-  
-  <!-- Communication Phase -->
-  <FlowNode x="200" y="250" type="accent">Content Generation</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Channel Selection</FlowNode>
-  
-  <!-- Engagement Phase -->
-  <FlowNode x="200" y="350" type="secondary">Track Interactions</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Score Engagement</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Optimize Timing</FlowNode>
-  
-  <!-- Analysis Phase -->
-  <FlowNode x="400" y="450" type="accent">Review Performance</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Adjust Strategy</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Generate Insights</FlowNode>
-  
-  <!-- Outcome Phase -->
-  <FlowNode x="400" y="650" type="primary">Update LP Profiles</FlowNode>
-  
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+```mermaid
+flowchart TD
+    A1[Connect CRM to Email] --> A2[Set Up Campaigns]
+    A2 --> A3[Configure Triggers]
+    A3 --> B1[Deploy Content Engine]
+    B1 --> B2[Apply LP Preferences]
+    B2 --> B3[Analyze Past Interactions]
+    B3 --> B4[Score Engagement]
+    B4 --> C1[Evaluate Response Patterns]
+    C1 --> C2[Identify Priority LPs]
+    C1 --> C3[Identify At-Risk LPs]
+    C2 --> C4[Suggest Next Actions]
+    C3 --> C4
+    C4 --> D1[Gather Feedback]
+    D1 --> D2[Record Project Feedback]
+    D2 --> D3[Refine Communications]
+    D3 --> D4[Update Templates]
+    D4 --> A2
+    D4 --> B1
+    
+    style A1 fill:#e6f3ff,stroke:#0066cc
+    style A2 fill:#e6f3ff,stroke:#0066cc
+    style A3 fill:#e6f3ff,stroke:#0066cc
+    style B1 fill:#e6ffe6,stroke:#006600
+    style B2 fill:#e6ffe6,stroke:#006600
+    style B3 fill:#e6ffe6,stroke:#006600
+    style B4 fill:#e6ffe6,stroke:#006600
+    style C1 fill:#fff0e6,stroke:#cc6600
+    style C2 fill:#fff0e6,stroke:#cc6600
+    style C3 fill:#fff0e6,stroke:#cc6600
+    style C4 fill:#fff0e6,stroke:#cc6600
+    style D1 fill:#f0e6ff,stroke:#6600cc
+    style D2 fill:#f0e6ff,stroke:#6600cc
+    style D3 fill:#f0e6ff,stroke:#6600cc
+    style D4 fill:#f0e6ff,stroke:#6600cc
+```
 
 ## Strategic Implementation Framework
 

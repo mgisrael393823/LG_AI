@@ -10,42 +10,157 @@ Advanced deal screening engine that scores opportunities against multiple LP pro
 
 ## Process Flow Diagram
 
-<FlowChart :width="900" :height="700">
-  <!-- Initial Phase -->
-  <FlowNode x="400" y="50" type="primary" highlight>New Deal Submission</FlowNode>
-  <FlowNode x="400" y="150" type="secondary">Extract & Validate Deal Data</FlowNode>
+<div class="deal-pipeline">
+  <div class="pipeline-main">
+    <div class="pipeline-step source">Deals Sourced</div>
+    <div class="pipeline-arrow">↓</div>
+    <div class="pipeline-step">Aggregate Deal Data</div>
+    <div class="pipeline-arrow">↓</div>
+    <div class="pipeline-step">Standardize Deal Attributes</div>
+    <div class="pipeline-arrow">↓</div>
+    <div class="pipeline-decision">Initial Screening</div>
+  </div>
   
-  <!-- Analysis Phase -->
-  <FlowNode x="200" y="250" type="accent">Market Performance Analysis</FlowNode>
-  <FlowNode x="600" y="250" type="accent">Financial Returns Assessment</FlowNode>
+  <div class="pipeline-branches">
+    <div class="pipeline-pass">
+      <h5>Meets Criteria</h5>
+      <div class="pipeline-step pass">Passes Initial Filter</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step pass">Score Against LP Preferences</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step pass">Rank by Strategic Focus</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step pass">Factor Market Growth</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step pass">Dashboard with Status</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step pass">Track Conversion Rates</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step destination">Advanced Due Diligence</div>
+    </div>
+    
+    <div class="pipeline-fail">
+      <h5>Doesn't Meet Criteria</h5>
+      <div class="pipeline-step fail">Rejected</div>
+      <div class="pipeline-arrow">↓</div>
+      <div class="pipeline-step destination">Excluded from Pipeline</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.deal-pipeline {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pipeline-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.pipeline-step {
+  width: 80%;
+  max-width: 400px;
+  background-color: #e6f3ff;
+  border: 1px solid #0066cc;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.pipeline-decision {
+  width: 80%;
+  max-width: 400px;
+  background-color: #ffeeee;
+  border: 1px solid #cc0000;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin: 5px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pipeline-step.source, .pipeline-step.destination {
+  background-color: #f5f5f5;
+  border: 1px dashed #666;
+}
+
+.pipeline-arrow {
+  color: #666;
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+.pipeline-branches {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pipeline-pass, .pipeline-fail {
+  flex: 1;
+}
+
+.pipeline-pass {
+  border-left: 3px solid #4caf50;
+  padding-left: 15px;
+}
+
+.pipeline-fail {
+  border-left: 3px solid #f44336;
+  padding-left: 15px;
+}
+
+.pipeline-branches h5 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.pipeline-step.pass {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.pipeline-step.fail {
+  background-color: #ffebee;
+  border-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .pipeline-branches {
+    flex-direction: column;
+  }
   
-  <!-- Scoring Phase -->
-  <FlowNode x="200" y="350" type="secondary">Risk Factor Analysis</FlowNode>
-  <FlowNode x="400" y="350" type="secondary">Calculate Deal Score</FlowNode>
-  <FlowNode x="600" y="350" type="secondary">Match with LP Criteria</FlowNode>
+  .pipeline-pass, .pipeline-fail {
+    border-left: none;
+    padding-left: 0;
+    border-top: 3px solid;
+    padding-top: 15px;
+    margin-top: 20px;
+  }
   
-  <!-- Decision Phase -->
-  <FlowNode x="400" y="450" type="accent">Meets Investment Criteria?</FlowNode>
-  <FlowNode x="200" y="550" type="secondary">Move to Archive</FlowNode>
-  <FlowNode x="600" y="550" type="secondary">Advance to Due Diligence</FlowNode>
+  .pipeline-pass {
+    border-top-color: #4caf50;
+  }
   
-  <!-- Outcome Phase -->
-  <FlowNode x="400" y="650" type="primary">Refine Scoring Model</FlowNode>
-  
-  <!-- Connectors -->
-  <FlowConnector :from="{ x: 400, y: 100 }" :to="{ x: 400, y: 150 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 200, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 200 }" :to="{ x: 600, y: 250 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 300 }" :to="{ x: 200, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 300 }" :to="{ x: 600, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 400 }" :to="{ x: 400, y: 350 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 400 }" :to="{ x: 400, y: 450 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 200, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 400, y: 500 }" :to="{ x: 600, y: 550 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 200, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-  <FlowConnector :from="{ x: 600, y: 600 }" :to="{ x: 400, y: 650 }" markerId="arrowhead" />
-</FlowChart>
+  .pipeline-fail {
+    border-top-color: #f44336;
+  }
+}
+</style>
 
 ## Strategic Implementation Framework
 

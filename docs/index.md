@@ -10,162 +10,178 @@ hero:
   actions:
     - theme: brand
       text: Executive Summary
-      link: /executive-summary
+      link: ./executive-summary
     - theme: alt
       text: Implementation Areas
-      link: /implementation-areas/lp-matching
+      link: ./implementation-areas/lp-matching
     - theme: alt
       text: Timeline
-      link: /timeline
+      link: ./timeline
 
 features:
   - icon: 🤝
     title: LP Identification & Matching
     details: Intelligent matching system creating detailed LP profiles and automatically matching them with suitable investment opportunities.
-    link: /implementation-areas/lp-matching
+    link: ./implementation-areas/lp-matching
   - icon: 📊
     title: Deal Pipeline Management
     details: Advanced deal screening engine that scores opportunities against multiple LP profiles simultaneously.
-    link: /implementation-areas/deal-pipeline
+    link: ./implementation-areas/deal-pipeline
   - icon: 📈
     title: Market Analysis
     details: Predictive analytics system to forecast market performance in target geographies with automated monitoring.
-    link: /implementation-areas/market-analysis
+    link: ./implementation-areas/market-analysis
   - icon: 💰
     title: Financial Modeling
     details: Advanced financial modeling system with standardized templates and sensitivity testing algorithms.
-    link: /implementation-areas/financial-modeling
+    link: ./implementation-areas/financial-modeling
   - icon: 👥
     title: Investor Relationship
     details: Advanced communication system with automated triggers and personalized content generation.
-    link: /implementation-areas/investor-management
+    link: ./implementation-areas/investor-management
   - icon: 🏢
     title: Asset Management
     details: Real-time performance monitoring with predictive maintenance algorithms and optimization recommendations.
-    link: /implementation-areas/asset-management
+    link: ./implementation-areas/asset-management
   - icon: 📝
     title: Investor Reporting
     details: Automated report generation with interactive dashboards and customized insights.
-    link: /implementation-areas/investor-reporting
+    link: ./implementation-areas/investor-reporting
 ---
 
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // This ensures VitePress renders the content correctly
+  console.log('Home page content mounted')
+})
+</script>
+
+# Transforming Real Estate Operations
+
+<p class="subtitle">Enhancing efficiency and decision-making through advanced AI methodologies</p>
+
+<div class="metrics-container">
+  <div class="metric-item">
+    <div class="metric-value">50-75%</div>
+    <div class="metric-label">Process Efficiency Gains</div>
+  </div>
+  <div class="metric-item">
+    <div class="metric-value">20-35%</div>
+    <div class="metric-label">Decision Quality Improvement</div>
+  </div>
+  <div class="metric-item">
+    <div class="metric-value">15-40%</div>
+    <div class="metric-label">ROI Improvement</div>
+  </div>
+</div>
+
+<div class="cta-container">
+  <h2>Ready to Transform Your Operations?</h2>
+  <p>Explore our comprehensive implementation framework and start your AI transformation journey today.</p>
+  <div class="action-buttons">
+    <a href="./executive-summary" class="action-button primary">View Executive Summary</a>
+    <a href="./timeline" class="action-button secondary">See Implementation Timeline</a>
+  </div>
+</div>
+
 <style>
-.metrics-section {
-  padding: 4rem 0;
-  background-color: var(--vp-c-bg-soft);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.section-title {
+.subtitle {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #666;
 }
 
-.section-title h2 {
-  margin-bottom: 1rem;
-}
-
-.metrics-overview {
+.metrics-container {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
-.metric-highlight {
+.metric-item {
   text-align: center;
   flex: 1;
   min-width: 200px;
+  padding: 1.5rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.metric-number {
+.metric-value {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--vp-c-brand);
+  color: #3a70b1;
   margin-bottom: 0.5rem;
 }
 
 .metric-label {
   font-size: 1.1rem;
-  color: var(--vp-c-text-2);
+  color: #555;
 }
 
-@media (max-width: 768px) {
-  .metric-highlight {
-    flex-basis: 100%;
-  }
-}
-
-.cta-section {
-  text-align: center;
-  margin-top: 4rem;
+.cta-container {
+  margin: 4rem auto;
   padding: 2rem;
-  background-color: var(--vp-c-bg-soft);
-  border-radius: 8px;
+  max-width: 800px;
+  text-align: center;
+  background-color: #f0f5ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.cta-section h3 {
+.cta-container h2 {
   margin-bottom: 1rem;
+  color: #333;
 }
 
-.cta-buttons {
+.action-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.cta-button {
+.action-button {
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-.cta-button.primary {
-  background-color: var(--vp-c-brand);
+.action-button.primary {
+  background-color: #3a70b1;
   color: white;
 }
 
-.cta-button.secondary {
-  border: 1px solid var(--vp-c-brand);
-  color: var(--vp-c-brand);
-}</style>
+.action-button.primary:hover {
+  background-color: #2c5a8f;
+  transform: translateY(-2px);
+}
 
-<div class="metrics-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Transforming Real Estate Operations</h2>
-      <p>Enhancing efficiency and decision-making through advanced AI methodologies</p>
-    </div>
-    
-    <div class="metrics-overview">
-      <div class="metric-highlight">
-        <div class="metric-number">50-75%</div>
-        <div class="metric-label">Process Efficiency Gains</div>
-      </div>
-      <div class="metric-highlight">
-        <div class="metric-number">20-35%</div>
-        <div class="metric-label">Decision Quality Improvement</div>
-      </div>
-      <div class="metric-highlight">
-        <div class="metric-number">15-40%</div>
-        <div class="metric-label">ROI Improvement</div>
-      </div>
-    </div>
-    
-    <div class="cta-section">
-      <h3>Ready to Transform Your Operations?</h3>
-      <p>Explore our comprehensive implementation framework and start your AI transformation journey today.</p>
-      <div class="cta-buttons">
-        <a href="/executive-summary" class="cta-button primary">View Executive Summary</a>
-        <a href="/timeline" class="cta-button secondary">See Implementation Timeline</a>
-      </div>
-    </div>
-  </div>
-</div>
+.action-button.secondary {
+  border: 1px solid #3a70b1;
+  color: #3a70b1;
+}
+
+.action-button.secondary:hover {
+  background-color: #f0f5ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .metric-item {
+    flex-basis: 100%;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+</style>

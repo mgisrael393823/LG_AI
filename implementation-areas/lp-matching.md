@@ -8,6 +8,40 @@ Manual profiling and CRM tracking of 10-20 targeted LPs with inconsistent data c
 
 An intelligent matching system creating detailed LP profiles, scoring their preferences, and automatically matching them with suitable investment opportunities using sophisticated predictive algorithms.
 
+## Process Flow Diagram
+
+```mermaid
+flowchart TD
+    A[LP Matching Process START] --> B[Collect LP Data]
+    B --> C[Create LP Profile]
+    C --> D[Enrich Profile with Historical Data]
+    D --> E[Generate Preference Score Matrix]
+    E --> F[Collect Deal Data]
+    F --> G[Create Deal Profile]
+    G --> H[Run Matching Algorithm]
+    H --> I[Rank LP-Deal Matches by Score]
+    I --> J[Display Top Matches with Rationale]
+    J --> K{Match Score > Threshold?}
+    K -->|Yes| L[Notify Investment Team]
+    K -->|No| Q[Store for Later Review]
+    L --> M[Present to LP]
+    M --> N{LP Interested?}
+    N -->|Yes| O[Initiate Deal Process]
+    N -->|No| P[Capture Feedback]
+    P --> R[Adjust LP Preferences]
+    Q --> S[Refine Algorithm]
+    R --> S
+    O --> Z[PROCESS END]
+    S --> Z
+    
+    style A fill:#f9f9ff,stroke:#0000ff,stroke-width:2px
+    style Z fill:#f9f9ff,stroke:#0000ff,stroke-width:2px
+    style K fill:#fff8e0,stroke:#ffa500,stroke-width:1px
+    style N fill:#fff8e0,stroke:#ffa500,stroke-width:1px
+    style B fill:#e6f3ff,stroke:#0066cc,stroke-width:1px
+    style F fill:#e6f3ff,stroke:#0066cc,stroke-width:1px
+```
+
 
 ## Strategic Implementation Framework
 
