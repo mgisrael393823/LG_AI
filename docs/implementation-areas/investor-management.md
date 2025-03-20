@@ -12,72 +12,36 @@ Advanced communication system with automated triggers, personalized content gene
 
 The following diagram illustrates the integrated approach to investor relationship management, with AI-powered personalization and continuous improvement.
 
-<div class="mermaid-wrapper investor-relationship-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Connect CRM to email] --> A2[Create email campaigns]
-    A2 --> A3[Trigger milestone emails]
-    A3 --> B1[NLG for tailored updates]
-    B1 --> B2[Based on preferences]
-    B2 --> B3[Based on past interactions]
-    B3 --> B4[Score engagement]
-    B4 --> C1{ML evaluates<br>responses}
-    C1 -->|High potential| C2[Identify high-potential LPs]
-    C1 -->|At risk| C3[Identify at-risk LPs]
-    C2 --> C4[CRM recommended steps]
+    A1["Connect CRM to email"] --> A2["Create email campaigns"]
+    A2 --> A3["Trigger milestone emails"]
+    A3 --> B1["NLG for tailored updates"]
+    B1 --> B2["Based on preferences"]
+    B2 --> B3["Based on past interactions"]
+    B3 --> B4["Score engagement"]
+    B4 --> C1["ML evaluates responses"]
+    C1 --> C2["Identify high-potential LPs"]
+    C1 --> C3["Identify at-risk LPs"]
+    C2 --> C4["CRM recommended steps"]
     C3 --> C4
-    C4 --> D1[Collect feedback]
-    D1 --> D2[Collect project feedback]
-    D2 --> D3[Refine communication]
-    D3 --> D4[Refine message templates]
-    D4 -.->|Template<br>refinement| A2
-    D4 -.->|Content<br>refinement| B1
+    C4 --> D1["Collect feedback"]
+    D1 --> D2["Collect project feedback"]
+    D2 --> D3["Refine communication"]
+    D3 --> D4["Refine message templates"]
+    D4 --> A2
+    D4 --> B1
     
-    classDef comms fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef tailoring fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef feedback fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef decision fill:#ffe0e0,stroke:#c05050,stroke-width:3px,color:#333,font-weight:bold
+    classDef comms fill:#e0f0ff,stroke:#3080e0
+    classDef tailoring fill:#e0ffe0,stroke:#30a030
+    classDef analysis fill:#fff0e0,stroke:#e08030
+    classDef feedback fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3 comms
     class B1,B2,B3,B4 tailoring
     class C1,C2,C3,C4 analysis
     class D1,D2,D3,D4 feedback
-    class C1 decision
-    
-    %% Process stage labels
-    subgraph legend [Process Components]
-        direction LR
-        l1[Communication System]
-        l2[Content Personalization]
-        l3[Response Analysis]
-        l4[Feedback Loop]
-        
-        classDef legendComms fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendTailor fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendAnalysis fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendFeedback fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendComms
-        class l2 legendTailor
-        class l3 legendAnalysis
-        class l4 legendFeedback
-        class legend legendStyle
-    end
 ```
 </div>
 

@@ -12,66 +12,32 @@ Advanced system with standardized templates, scenario analysis capabilities, and
 
 The following diagram illustrates how AI and machine learning enhance the financial modeling process, providing more accurate projections and continuous improvement.
 
-<div class="mermaid-wrapper financial-modeling-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Gather core assumptions] --> A2[Central data repository]
-    A2 --> A3[Consistent naming conventions]
-    A3 --> B1[Excel/Google templates]
-    B1 --> B2[Python financial models]
-    B2 --> B3[Sensitivity testing modules]
-    B3 --> C1[ML adjusts assumptions]
-    C1 --> C2[Based on historical data]
-    C2 --> C3[Based on market data]
-    C3 --> C4[Highlight discrepancies]
-    C4 --> D1[Git version control]
-    D1 --> D2[Track modifications]
-    D2 --> D3[Document overrides]
-    D3 -.->|ML Feedback Loop| C1
+    A1["Gather core assumptions"] --> A2["Central data repository"]
+    A2 --> A3["Consistent naming conventions"]
+    A3 --> B1["Excel/Google templates"]
+    B1 --> B2["Python financial models"]
+    B2 --> B3["Sensitivity testing modules"]
+    B3 --> C1["ML adjusts assumptions"]
+    C1 --> C2["Based on historical data"]
+    C2 --> C3["Based on market data"]
+    C3 --> C4["Highlight discrepancies"]
+    C4 --> D1["Git version control"]
+    D1 --> D2["Track modifications"]
+    D2 --> D3["Document overrides"]
+    D3 --> C1
     
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef models fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef ml fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef version fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef models fill:#e0ffe0,stroke:#30a030
+    classDef ml fill:#fff0e0,stroke:#e08030
+    classDef version fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3 data
     class B1,B2,B3 models
     class C1,C2,C3,C4 ml
     class D1,D2,D3 version
-    
-    %% Process stage labels
-    subgraph legend [Process Stages]
-        direction LR
-        l1[Data Collection]
-        l2[Financial Modeling]
-        l3[ML Enhancement]
-        l4[Version Control]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendModels fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendML fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendVC fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendModels
-        class l3 legendML
-        class l4 legendVC
-        class legend legendStyle
-    end
 ```
 </div>
 

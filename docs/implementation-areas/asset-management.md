@@ -16,79 +16,37 @@ Intelligent asset management platform integrating IoT sensors, predictive mainte
 
 The following diagram illustrates the comprehensive approach to AI-powered asset management, highlighting the integration of property data, predictive maintenance, tenant analysis, and alert systems.
 
-<div class="mermaid-wrapper asset-management-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Integrate property software] --> A2[Capture leasing data]
-    A2 --> A3[Dashboard for portfolio]
+    A1["Integrate property software"] --> A2["Capture leasing data"]
+    A2 --> A3["Dashboard for portfolio"]
+    A3 --> B1["Deploy IoT sensors"]
+    B1 --> B2["Track building systems"]
+    B2 --> B3["ML predicts failures"]
+    B3 --> B4["Schedule maintenance"]
+    A3 --> C1["Analyze usage patterns"]
+    C1 --> C2["Analyze service requests"]
+    C2 --> C3["Analyze renewal rates"]
+    C3 --> C4["AI recommends strategies"]
+    C4 --> C5["Tenant programs"]
+    A3 --> D1["Set metric thresholds"]
+    D1 --> D2["Trigger alerts"]
+    D2 --> D3["Recommend actions"]
+    D3 --> D4["Track resolution"]
+    B4 --> A3
+    C5 --> A3
+    D4 --> A3
     
-    %% Branch 1 - Maintenance
-    A3 --> B1[Deploy IoT sensors]
-    B1 --> B2[Track building systems]
-    B2 --> B3[ML predicts failures]
-    B3 --> B4[Schedule maintenance]
-    B4 -.->|Status update| A3
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef maintenance fill:#e0ffe0,stroke:#30a030
+    classDef analysis fill:#fff0e0,stroke:#e08030
+    classDef alerts fill:#f0e0ff,stroke:#8030e0
     
-    %% Branch 2 - Tenant Analysis
-    A3 --> C1[Analyze usage patterns]
-    C1 --> C2[Analyze service requests]
-    C2 --> C3[Analyze renewal rates]
-    C3 --> C4[AI recommends strategies]
-    C4 --> C5[Tenant programs]
-    C5 -.->|Program<br>results| A3
-    
-    %% Branch 3 - Alerts
-    A3 --> D1[Set metric thresholds]
-    D1 --> D2[Trigger alerts]
-    D2 --> D3[Recommend actions]
-    D3 --> D4[Track resolution]
-    D4 -.->|Resolution<br>status| A3
-    
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef maintenance fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef alerts fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef central fill:#c0e0ff,stroke:#3080e0,stroke-width:3px,color:#333,font-weight:bold
-    
-    class A1,A2 data
-    class A3 central
+    class A1,A2,A3 data
     class B1,B2,B3,B4 maintenance
     class C1,C2,C3,C4,C5 analysis
     class D1,D2,D3,D4 alerts
-    
-    %% Branch labels
-    subgraph legend [Operational Components]
-        direction LR
-        l1[Data Integration]
-        l2[Predictive Maintenance]
-        l3[Tenant Analysis]
-        l4[Alert System]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendMaint fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendAnalysis fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendAlerts fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendMaint
-        class l3 legendAnalysis
-        class l4 legendAlerts
-        class legend legendStyle
-    end
 ```
 </div>
 

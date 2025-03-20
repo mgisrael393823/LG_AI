@@ -4,59 +4,22 @@
 
 The following diagram illustrates the AI-enhanced deal pipeline management workflow, showing how deals are processed, evaluated, and tracked through the system.
 
-<div class="mermaid-wrapper deal-pipeline-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#e0f0f0',
-    'primaryBorderColor': '#2070a0',
-    'primaryTextColor': '#333',
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A[Aggregate deal data] --> B[Standardize attributes]
-    B --> C{Initial<br>Screening}
-    C -->|Meets criteria| D[Passes filter]
-    C -->|Fails criteria| F[Rejected]
-    D --> G[Score against LP preferences]
-    G --> H[Rank by strategic focus]
-    H --> I[Factor market growth]
-    I --> J[Dashboard with status]
-    J --> K[Track conversion rates]
+    A["Aggregate deal data"] --> B["Standardize attributes"]
+    B --> C{"Initial Screening"}
+    C -->|Meets criteria| D["Passes filter"]
+    C -->|Fails criteria| F["Rejected"]
+    D --> G["Score against LP preferences"]
+    G --> H["Rank by strategic focus"]
+    H --> I["Factor market growth"]
+    I --> J["Dashboard with status"]
+    J --> K["Track conversion rates"]
     
-    classDef default fill:#e0f0f0,stroke:#2070a0,stroke-width:2px,color:#333,font-size:14px
-    classDef decision fill:#ffe0e0,stroke:#c05050,stroke-width:3px,color:#333,font-weight:bold
-    classDef pass fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333
-    classDef fail fill:#ffe0e0,stroke:#c05050,stroke-width:2px,color:#333
-    
+    classDef default fill:#e0f0f0,stroke:#2070a0
+    classDef decision fill:#ffe0e0,stroke:#c05050
     class C decision
-    class D,G,H,I,J,K pass
-    class F fail
-    
-    %% Add labels for the pathway
-    subgraph positive [Positive Pathway]
-        direction LR
-        posLabel[Qualified Deal Processing]
-        
-        classDef pathStyle fill:none,stroke:none,color:#30a030,font-style:italic
-        class positive,posLabel pathStyle
-    end
-    
-    subgraph negative [Negative Pathway]
-        direction LR
-        negLabel[Disqualified Deals]
-        
-        classDef negPathStyle fill:none,stroke:none,color:#c05050,font-style:italic
-        class negative,negLabel negPathStyle
-    end
 ```
 </div>
 

@@ -12,53 +12,24 @@ An intelligent matching system creating detailed LP profiles, scoring their pref
 
 The following diagram illustrates the intelligent workflow for identifying and matching limited partners with investment opportunities, emphasizing how machine learning enhances the process.
 
-<div class="mermaid-wrapper lp-matching-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#d0e0ff',
-    'primaryBorderColor': '#3080ff',
-    'primaryTextColor': '#333',
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'nodeBorder': '2px',
-    'nodeMargin': '12px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    A1[Pull LP data from CRM] --> A2[Normalize data fields]
-    A2 --> A3[Tag LPs with attributes]
-    A3 --> B1[Use ML to cluster LPs]
-    B1 --> B2[Generate predictive profiles]
-    B2 --> C1[Ingest new deals]
-    C1 --> C2[Rank compatibility]
-    C2 --> C3[Prioritize LP-deal pairs]
-    C3 --> D1[Teams review matches]
-    D1 --> D2[Confirm recommendations]
-    D2 --> D3[Feed decisions back to system]
-    D3 -.->|Continuous learning loop| B1
-    
-    classDef default fill:#d0e0ff,stroke:#3080ff,stroke-width:2px,color:#333,font-size:14px
-    classDef highlight fill:#b0d0ff,stroke:#2060cc,stroke-width:2px,color:#333,font-weight:bold
+    A1["Pull LP data from CRM"] --> A2["Normalize data fields"]
+    A2 --> A3["Tag LPs with attributes"]
+    A3 --> B1["Use ML to cluster LPs"]
+    B1 --> B2["Generate predictive profiles"]
+    B2 --> C1["Ingest new deals"]
+    C1 --> C2["Rank compatibility"]
+    C2 --> C3["Prioritize LP-deal pairs"]
+    C3 --> D1["Teams review matches"]
+    D1 --> D2["Confirm recommendations"]
+    D2 --> D3["Feed decisions back to system"]
+    D3 --> B1
+
+    classDef default fill:#d0e0ff,stroke:#3080ff,stroke-width:2px
+    classDef highlight fill:#b0d0ff,stroke:#2060cc,stroke-width:2px
     class B1,B2 highlight
-    
-    %% Caption text
-    subgraph caption [LP Identification and Matching Workflow]
-        direction LR
-        cap1[Data Collection and Normalization]
-        cap2[ML-Driven Analysis]
-        cap3[Deal Matching]
-        cap4[Human Oversight and Feedback Loop]
-        cap1 --- cap2 --- cap3 --- cap4
-        
-        classDef captionStyle fill:none,stroke:none,color:#666,font-style:italic
-        class caption,cap1,cap2,cap3,cap4 captionStyle
-    end
 ```
 </div>
 
@@ -68,41 +39,28 @@ This system integrates CRM data with machine learning to create an intelligent m
 
 The following diagram demonstrates how LPs can be clustered by investment preferences, revealing natural groupings and affinities between investor types and deal categories.
 
-<div class="mermaid-wrapper lp-clustering-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'lineWidth': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 graph TD
-    LP1[Pension Fund] --- LP2[Sovereign Wealth]
-    LP2 --- LP3[Insurance Co]
+    LP1["Pension Fund"] --- LP2["Sovereign Wealth"]
+    LP2 --- LP3["Insurance Co"]
     LP1 --- LP3
     
-    LP4[Family Office A] --- LP5[Family Office B]
-    LP5 --- LP6[HNWI Group]
+    LP4["Family Office A"] --- LP5["Family Office B"]
+    LP5 --- LP6["HNWI Group"]
     LP4 --- LP6
     
-    LP7[Opportunity Fund] --- LP8[Private Equity]
-    LP8 --- LP9[Venture Capital]
+    LP7["Opportunity Fund"] --- LP8["Private Equity"]
+    LP8 --- LP9["Venture Capital"]
     LP7 --- LP9
     
     LP3 --- LP4
     LP6 --- LP7
     
-    D1[Value-Add Multifamily]
-    D2[Core Office]
-    D3[Development JV]
-    D4[Opportunistic Retail]
+    D1["Value-Add Multifamily"]
+    D2["Core Office"]
+    D3["Development JV"]
+    D4["Opportunistic Retail"]
     
     LP1 --- D2
     LP2 --- D2
@@ -114,36 +72,15 @@ graph TD
     LP8 --- D4
     LP9 --- D4
     
-    classDef institutional fill:#c4e0ff,stroke:#0066cc,stroke-width:3px,color:#333,font-weight:bold
-    classDef family fill:#ffe0b3,stroke:#cc7700,stroke-width:3px,color:#333,font-weight:bold
-    classDef opportunity fill:#ffc2c2,stroke:#cc0000,stroke-width:3px,color:#333,font-weight:bold
-    classDef deals fill:#e0ffe0,stroke:#008800,stroke-width:2px,color:#333,font-weight:bold
+    classDef institutional fill:#c4e0ff,stroke:#0066cc
+    classDef family fill:#ffe0b3,stroke:#cc7700
+    classDef opportunity fill:#ffc2c2,stroke:#cc0000
+    classDef deals fill:#e0ffe0,stroke:#008800
     
     class LP1,LP2,LP3 institutional
     class LP4,LP5,LP6 family
     class LP7,LP8,LP9 opportunity
     class D1,D2,D3,D4 deals
-    
-    %% Legend
-    subgraph legend [Investor Categories]
-        direction LR
-        l1[Institutional Investors]
-        l2[Family Offices]
-        l3[Opportunity Investors]
-        l4[Deal Types]
-        
-        classDef legendInst fill:#c4e0ff,stroke:#0066cc,stroke-width:2px,color:#333
-        classDef legendFam fill:#ffe0b3,stroke:#cc7700,stroke-width:2px,color:#333  
-        classDef legendOpp fill:#ffc2c2,stroke:#cc0000,stroke-width:2px,color:#333
-        classDef legendDeal fill:#e0ffe0,stroke:#008800,stroke-width:2px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendInst
-        class l2 legendFam
-        class l3 legendOpp
-        class l4 legendDeal
-        class legend legendStyle
-    end
 ```
 </div>
 

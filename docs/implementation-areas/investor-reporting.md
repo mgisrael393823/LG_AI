@@ -16,80 +16,39 @@ Advanced reporting platform with automated data aggregation, AI-generated narrat
 
 The following diagram illustrates the comprehensive workflow for AI-enhanced investor reporting, showing how data is transformed into personalized investor communications.
 
-<div class="mermaid-wrapper investor-reporting-diagram">
+<div class="mermaid">
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'system-ui',
-    'primaryTextColor': '#333',
-    'nodeBorder': '2px'
-  },
-  'flowchart': {
-    'htmlLabels': true,
-    'curve': 'basis'
-  }
-}}%%
 flowchart TD
-    %% Data aggregation
-    A1[Aggregate financials] --> A2[Aggregate market stats]
-    A2 --> A3[Aggregate operational data]
-    A3 --> A4[Data warehouse storage]
-    A4 --> A5[Automated pipelines]
-    
-    %% Report generation
-    A5 --> B1[Standardized templates]
-    B1 --> B2[NLG drafts narratives]
-    B2 --> B3[Market outlook content]
-    B3 --> B4[Portfolio updates]
-    B4 --> B5[Final reports]
-    
-    %% Delivery platform
-    B5 --> C1[Online portals for LPs]
-    C1 --> C2[Real-time KPIs]
-    C2 --> C3[Customizable views]
-    C3 --> C4[Project/portfolio views]
-    
-    %% Personalization and analytics
-    C4 --> D1[Personalized highlights]
-    D1 --> D2[Track usage metrics]
-    D2 --> D3[Identify engaged investors]
-    D2 --> D4[Identify non-engaged investors]
-    D3 --> D5[Tailor communications]
+    A1["Aggregate financials"] --> A2["Aggregate market stats"]
+    A2 --> A3["Aggregate operational data"]
+    A3 --> A4["Data warehouse storage"]
+    A4 --> A5["Automated pipelines"]
+    A5 --> B1["Standardized templates"]
+    B1 --> B2["NLG drafts narratives"]
+    B2 --> B3["Market outlook content"]
+    B3 --> B4["Portfolio updates"]
+    B4 --> B5["Final reports"]
+    B5 --> C1["Online portals for LPs"]
+    C1 --> C2["Real-time KPIs"]
+    C2 --> C3["Customizable views"]
+    C3 --> C4["Project/portfolio views"]
+    C4 --> D1["Personalized highlights"]
+    D1 --> D2["Track usage metrics"]
+    D2 --> D3["Identify engaged investors"]
+    D2 --> D4["Identify non-engaged investors"]
+    D3 --> D5["Tailor communications"]
     D4 --> D5
-    D5 -.->|Content<br>optimization| B2
+    D5 --> B2
     
-    classDef data fill:#e0f0ff,stroke:#3080e0,stroke-width:2px,color:#333,font-weight:bold
-    classDef reports fill:#e0ffe0,stroke:#30a030,stroke-width:2px,color:#333,font-weight:bold
-    classDef portals fill:#fff0e0,stroke:#e08030,stroke-width:2px,color:#333,font-weight:bold
-    classDef analysis fill:#f0e0ff,stroke:#8030e0,stroke-width:2px,color:#333,font-weight:bold
+    classDef data fill:#e0f0ff,stroke:#3080e0
+    classDef reports fill:#e0ffe0,stroke:#30a030
+    classDef portals fill:#fff0e0,stroke:#e08030
+    classDef analysis fill:#f0e0ff,stroke:#8030e0
     
     class A1,A2,A3,A4,A5 data
     class B1,B2,B3,B4,B5 reports
     class C1,C2,C3,C4 portals
     class D1,D2,D3,D4,D5 analysis
-    
-    %% Process stage labels
-    subgraph legend [Process Components]
-        direction LR
-        l1[Data Aggregation]
-        l2[Report Generation]
-        l3[Delivery Platform]
-        l4[Analytics & Personalization]
-        
-        classDef legendData fill:#e0f0ff,stroke:#3080e0,stroke-width:1px,color:#333
-        classDef legendReports fill:#e0ffe0,stroke:#30a030,stroke-width:1px,color:#333  
-        classDef legendPortals fill:#fff0e0,stroke:#e08030,stroke-width:1px,color:#333
-        classDef legendAnalysis fill:#f0e0ff,stroke:#8030e0,stroke-width:1px,color:#333
-        classDef legendStyle fill:none,stroke:none
-        
-        class l1 legendData
-        class l2 legendReports
-        class l3 legendPortals
-        class l4 legendAnalysis
-        class legend legendStyle
-    end
 ```
 </div>
 

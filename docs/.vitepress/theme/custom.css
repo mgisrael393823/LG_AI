@@ -1,80 +1,25 @@
 /* .vitepress/theme/custom.css */
-.language-mermaid {
-  background-color: transparent !important;
-  margin: 2rem 0;
-  padding: 0 !important;
-  overflow: auto;
-}
 
-.language-mermaid pre {
-  background-color: transparent !important;
-  text-align: center;
-}
-
+/* Mermaid diagram styling */
 .mermaid {
   display: flex;
   justify-content: center;
-}
-
-/* Apply to all diagram containers */
-.mermaid-wrapper {
-  display: flex;
-  justify-content: center;
   margin: 2rem auto;
-  width: 100%;
+  max-width: 90%;
+  overflow-x: auto;
+  background-color: transparent !important;
 }
 
-/* LP Identification and Matching Flow */
-.lp-matching-diagram .mermaid {
-  width: 85%;
-  max-width: 900px;
+/* Make sure any text in the diagram is readable */
+.mermaid text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
 }
 
-/* LP Clustering by Investment Preferences */
-.lp-clustering-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
-
-/* Deal Pipeline Management Process */
-.deal-pipeline-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
-
-/* AI-Enhanced Financial Modeling Process */
-.financial-modeling-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
-
-/* Investor Relationship Management Process */
-.investor-relationship-diagram .mermaid {
-  width: 85%;
-  max-width: 950px;
-}
-
-/* AI-Powered Asset Management Process */
-.asset-management-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
-
-/* AI-Enhanced Investor Reporting Process */
-.investor-reporting-diagram .mermaid {
-  width: 90%;
-  max-width: 1000px;
-}
-
-/* AI Implementation Roadmap Timeline */
-.implementation-timeline-diagram .mermaid {
-  width: 95%;
-  max-width: 1100px;
-}
-
-/* Responsive adjustments for mobile */
+/* Ensure diagram containers are responsive */
 @media (max-width: 768px) {
-  .mermaid-wrapper .mermaid {
-    width: 100% !important;
+  .mermaid {
+    max-width: 100%;
+    font-size: 12px;
   }
 }
