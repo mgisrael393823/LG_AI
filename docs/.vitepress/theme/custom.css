@@ -1,31 +1,124 @@
 /* .vitepress/theme/custom.css */
 
-/* SVG diagram styling */
+/* SVG diagram styling with expandable click functionality */
 .diagram-container {
   display: flex;
-  justify-content: center;
-  margin: 2.5rem auto;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
   width: 100%;
 }
 
+/* Default diagram sizing */
 .diagram-container img {
-  max-width: 90%;
+  width: auto;
+  max-width: 600px;
+  max-height: 420px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Show pointer cursor to indicate clickability */
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.diagram-container .caption {
-  margin-top: 1rem;
-  text-align: center;
-  font-style: italic;
-  color: #666;
-  font-size: 0.9rem;
+/* Different diagram types sizing */
+.timeline-diagram img {
+  max-width: 700px;
+  max-height: 350px;
+}
+
+.clustering-diagram img {
+  max-width: 550px;
+  max-height: 400px;
+}
+
+.process-diagram img {
+  max-width: 580px;
+  max-height: 400px;
+}
+
+/* Using a positioned wrapper instead of pseudo-elements for greater compatibility */
+.diagram-container {
+  position: relative;
+}
+
+.diagram-container img {
+  /* Existing styles remain */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Expand button/hint that appears on hover */
+.diagram-container .expand-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Show hint on container hover */
+.diagram-container:hover .expand-hint {
+  opacity: 1;
+}
+
+/* Hover effect for diagrams */
+.diagram-container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal for expanded diagrams */
+.diagram-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.diagram-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.diagram-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.diagram-modal .close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 /* Ensure diagram containers are responsive */
 @media (max-width: 768px) {
-  .diagram-container img {
-    max-width: 100%;
+  .diagram-container img, 
+  .timeline-diagram img, 
+  .clustering-diagram img, 
+  .process-diagram img {
+    max-width: 95%;
   }
 }

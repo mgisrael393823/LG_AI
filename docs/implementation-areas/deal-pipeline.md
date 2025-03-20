@@ -4,7 +4,7 @@
 
 The following diagram illustrates the AI-enhanced deal pipeline management workflow, showing how deals are processed, evaluated, and tracked through the system.
 
-<div class="diagram-container">
+<div class="diagram-container process-diagram">
   <img src="https://www.mermaidchart.com/raw/9fdbaad7-0f71-4b3d-b938-9bfd09481e3b?theme=light&version=v0.1&format=svg" alt="Deal Pipeline Management Process Diagram" />
 </div>
 

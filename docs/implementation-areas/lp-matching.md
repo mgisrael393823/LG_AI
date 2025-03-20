@@ -12,7 +12,7 @@ An intelligent matching system creating detailed LP profiles, scoring their pref
 
 The following diagram illustrates the intelligent workflow for identifying and matching limited partners with investment opportunities, emphasizing how machine learning enhances the process.
 
-<div class="diagram-container">
+<div class="diagram-container process-diagram">
   <img src="https://www.mermaidchart.com/raw/51201aee-9c5e-4adc-8489-9eadcf6bc027?theme=light&version=v0.1&format=svg" alt="LP Identification and Matching Flow Diagram" />
 </div>
 
@@ -22,7 +22,7 @@ This system integrates CRM data with machine learning to create an intelligent m
 
 The following diagram demonstrates how LPs can be clustered by investment preferences, revealing natural groupings and affinities between investor types and deal categories.
 
-<div class="diagram-container">
+<div class="diagram-container clustering-diagram">
   <img src="https://www.mermaidchart.com/raw/84f7ee75-d192-4c3f-baa8-f13890a0525e?theme=light&version=v0.1&format=svg" alt="LP Clustering by Investment Preferences Diagram" />
 </div>
 

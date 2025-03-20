@@ -16,7 +16,7 @@ Advanced reporting platform with automated data aggregation, AI-generated narrat
 
 The following diagram illustrates the comprehensive workflow for AI-enhanced investor reporting, showing how data is transformed into personalized investor communications.
 
-<div class="diagram-container">
+<div class="diagram-container process-diagram">
   <img src="https://www.mermaidchart.com/raw/e2f4ed0f-f168-4fe1-8edf-5495b96e0f12?theme=light&version=v0.1&format=svg" alt="AI-Enhanced Investor Reporting Process Diagram" />
 </div>
 

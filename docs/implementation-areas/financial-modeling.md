@@ -12,7 +12,7 @@ Advanced system with standardized templates, scenario analysis capabilities, and
 
 The following diagram illustrates how AI and machine learning enhance the financial modeling process, providing more accurate projections and continuous improvement.
 
-<div class="diagram-container">
+<div class="diagram-container process-diagram">
   <img src="https://www.mermaidchart.com/raw/51201aee-9c5e-4adc-8489-9eadcf6bc027?theme=light&version=v0.1&format=svg" alt="AI-Enhanced Financial Modeling Process Diagram" />
 </div>
 

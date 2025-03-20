@@ -6,7 +6,7 @@ This page outlines DISRVPT VENTURES' phased approach to implementing the AI tran
 
 The following Gantt chart provides a detailed timeline for the AI implementation roadmap, showing key tasks, dependencies, and milestones across the three implementation phases.
 
-<div class="diagram-container">
+<div class="diagram-container timeline-diagram">
   <img src="https://www.mermaidchart.com/raw/1474609e-2910-40bd-87b9-4ff64149565a?theme=light&version=v0.1&format=svg" alt="AI Implementation Roadmap Timeline" />
 </div>
 

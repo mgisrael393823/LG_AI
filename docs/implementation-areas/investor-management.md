@@ -12,7 +12,7 @@ Advanced communication system with automated triggers, personalized content gene
 
 The following diagram illustrates the integrated approach to investor relationship management, with AI-powered personalization and continuous improvement.
 
-<div class="diagram-container">
+<div class="diagram-container process-diagram">
   <img src="https://www.mermaidchart.com/raw/71a56c29-1afd-40da-89d5-ea32390ca290?theme=light&version=v0.1&format=svg" alt="Investor Relationship Management Process Diagram" />
 </div>
 
