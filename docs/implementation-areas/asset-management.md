@@ -17,7 +17,7 @@ Intelligent asset management platform integrating IoT sensors, predictive mainte
 The following diagram illustrates the comprehensive approach to AI-powered asset management, highlighting the integration of property data, predictive maintenance, tenant analysis, and alert systems.
 
 <div class="diagram-container">
-  <img src="/images/diagrams/asset-management-process.svg" alt="AI-Powered Asset Management Process Diagram" />
+  <img src="https://www.mermaidchart.com/raw/debd4ddf-56b3-4ac9-b785-003eab9185cf?theme=light&version=v0.1&format=svg" alt="AI-Powered Asset Management Process Diagram" />
 </div>
 
 This diagram illustrates how AI transforms asset management through three integrated branches: predictive maintenance, tenant analysis, and alert systems. The central portfolio dashboard serves as the hub, receiving data from all systems and providing a unified view of property performance. IoT sensors monitor building systems to predict failures before they occur, while tenant data analysis reveals patterns that drive retention strategies. The alert system ensures timely responses to issues through automated threshold monitoring and action recommendations. All components continuously feed performance data back to the central dashboard, creating a self-improving system.

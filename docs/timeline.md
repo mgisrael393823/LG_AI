@@ -7,7 +7,7 @@ This page outlines DISRVPT VENTURES' phased approach to implementing the AI tran
 The following Gantt chart provides a detailed timeline for the AI implementation roadmap, showing key tasks, dependencies, and milestones across the three implementation phases.
 
 <div class="diagram-container">
-  <img src="/images/diagrams/implementation-timeline.svg" alt="AI Implementation Roadmap Timeline" />
+  <img src="https://www.mermaidchart.com/raw/1474609e-2910-40bd-87b9-4ff64149565a?theme=light&version=v0.1&format=svg" alt="AI Implementation Roadmap Timeline" />
 </div>
 
 This Gantt chart illustrates the phased implementation approach for the AI transformation initiatives. The timeline is divided into immediate (90-day), medium-term (3-6 month), and long-term (6-12 month) phases, with clear dependencies between tasks. Ongoing activities span multiple phases to ensure continuous improvement and adoption. Key milestones mark the completion of each phase, providing clear checkpoints for progress evaluation.

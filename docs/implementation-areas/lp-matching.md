@@ -13,7 +13,7 @@ An intelligent matching system creating detailed LP profiles, scoring their pref
 The following diagram illustrates the intelligent workflow for identifying and matching limited partners with investment opportunities, emphasizing how machine learning enhances the process.
 
 <div class="diagram-container">
-  <img src="/images/diagrams/lp-identification-flow.svg" alt="LP Identification and Matching Flow Diagram" />
+  <img src="https://www.mermaidchart.com/raw/7dde97d9-fda2-4f42-a812-e96e078e11d5?theme=light&version=v0.1&format=svg" alt="LP Identification and Matching Flow Diagram" />
 </div>
 
 This system integrates CRM data with machine learning to create an intelligent matching process. The machine learning components continuously improve through feedback loops, learning from successful matches to refine future recommendations.
@@ -23,7 +23,7 @@ This system integrates CRM data with machine learning to create an intelligent m
 The following diagram demonstrates how LPs can be clustered by investment preferences, revealing natural groupings and affinities between investor types and deal categories.
 
 <div class="diagram-container">
-  <img src="/images/diagrams/lp-clustering.svg" alt="LP Clustering by Investment Preferences Diagram" />
+  <img src="https://www.mermaidchart.com/raw/84f7ee75-d192-4c3f-baa8-f13890a0525e?theme=light&version=v0.1&format=svg" alt="LP Clustering by Investment Preferences Diagram" />
 </div>
 
 This clustering visualization shows how different types of investors naturally gravitate toward specific deal types. Institutional investors (blue) prefer stable core office properties, family offices (orange) favor value-add multifamily, while opportunity investors (red) target higher-risk development JVs and opportunistic retail. This analysis enables more targeted matching and outreach strategies.
