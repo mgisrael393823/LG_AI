@@ -8,126 +8,15 @@ Manual market research process with fragmented data sources and limited ability 
 
 Predictive analytics system to forecast market performance in target geographies with automated monitoring of key indicators and custom alert thresholds.
 
-## Process Flow Diagram
+## Market Analysis Process
 
-<div class="market-diagram">
-  <div class="process-section data-section">
-    <h4>Data Collection</h4>
-    <div class="process-box data-box">Set Up Data Feeds</div>
-    <div class="process-box data-box">Gather Macro Indicators</div>
-    <div class="process-box data-box">Gather Micro Indicators</div>
-  </div>
-  
-  <div class="section-arrow">↓</div>
-  
-  <div class="process-section analysis-section">
-    <h4>Analysis</h4>
-    <div class="process-box analysis-box">Predict Rent Growth</div>
-    <div class="process-box analysis-box">Forecast Vacancy Rates</div>
-    <div class="process-box analysis-box">Generate Market Alerts</div>
-  </div>
-  
-  <div class="section-arrow">↓</div>
-  
-  <div class="process-section testing-section">
-    <h4>Testing</h4>
-    <div class="process-box testing-box">Test Market Scenarios</div>
-    <div class="process-box testing-box">Stress-Test Assumptions</div>
-    <div class="process-box testing-box">Identify Key Variables</div>
-  </div>
-  
-  <div class="section-arrow">↓</div>
-  
-  <div class="process-section output-section">
-    <h4>Output</h4>
-    <div class="process-box output-box">Share Insights</div>
-    <div class="process-box output-box">Update Scoring Engine</div>
-  </div>
-  
-  <div class="feedback-arrow">← Feedback Loop to Analysis Phase</div>
+The following diagram illustrates the AI-enhanced market analysis workflow, showing how data is collected, analyzed, and transformed into actionable insights.
+
+<div class="diagram-container process-diagram">
+  <img src="https://www.mermaidchart.com/raw/c847efb0-8ffb-4c52-b1d7-b716a748fc6d?theme=light&version=v0.1&format=svg" alt="Market Analysis Process Diagram" />
 </div>
 
-<style>
-.market-diagram {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.process-section {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.process-section h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.process-box {
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.section-arrow {
-  text-align: center;
-  font-size: 20px;
-  margin: 10px 0;
-  color: #666;
-}
-
-.feedback-arrow {
-  text-align: center;
-  font-style: italic;
-  margin-top: 15px;
-  color: #666;
-}
-
-.data-section {
-  background-color: #eaf4ff;
-}
-
-.data-box {
-  background-color: #d6e9ff;
-  border: 1px solid #0066cc;
-}
-
-.analysis-section {
-  background-color: #eaffea;
-}
-
-.analysis-box {
-  background-color: #d6ffd6;
-  border: 1px solid #006600;
-}
-
-.testing-section {
-  background-color: #fff4ea;
-}
-
-.testing-box {
-  background-color: #ffe6d1;
-  border: 1px solid #cc6600;
-}
-
-.output-section {
-  background-color: #f4eaff;
-}
-
-.output-box {
-  background-color: #e6d6ff;
-  border: 1px solid #6600cc;
-}
-</style>
+This diagram demonstrates the comprehensive market analysis process enabled by AI. Starting with automated data collection from multiple sources, the system analyzes market trends and indicators to forecast performance. Advanced testing validates assumptions and identifies risks before delivering insights through interactive dashboards. The continuous feedback loop ensures models remain accurate as market conditions evolve.
 
 ## Strategic Implementation Framework
 
