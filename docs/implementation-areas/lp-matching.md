@@ -12,73 +12,19 @@ An intelligent matching system creating detailed LP profiles, scoring their pref
 
 The following diagram illustrates the intelligent workflow for identifying and matching limited partners with investment opportunities, emphasizing how machine learning enhances the process.
 
-```mermaid
-flowchart TD
-    A1["Pull LP data from CRM"] --> A2["Normalize data fields"]
-    A2 --> A3["Tag LPs with attributes"]
-    A3 --> B1["Use ML to cluster LPs"]
-    B1 --> B2["Generate predictive profiles"]
-    B2 --> C1["Ingest new deals"]
-    C1 --> C2["Rank compatibility"]
-    C2 --> C3["Prioritize LP-deal pairs"]
-    C3 --> D1["Teams review matches"]
-    D1 --> D2["Confirm recommendations"]
-    D2 --> D3["Feed decisions back to system"]
-    D3 --> B1
+<div class="diagram-container">
+  <img src="/images/diagrams/lp-identification-flow.svg" alt="LP Identification and Matching Flow Diagram" />
+</div>
 
-    classDef default fill:#d0e0ff,stroke:#3080ff,stroke-width:2px
-    classDef highlight fill:#b0d0ff,stroke:#2060cc,stroke-width:2px
-    class B1,B2 highlight
-```
-
-This system integrates CRM data with machine learning to create an intelligent matching process. The highlighted ML components continuously improve through feedback loops, learning from successful matches to refine future recommendations.
+This system integrates CRM data with machine learning to create an intelligent matching process. The machine learning components continuously improve through feedback loops, learning from successful matches to refine future recommendations.
 
 ## LP Classification Analysis
 
 The following diagram demonstrates how LPs can be clustered by investment preferences, revealing natural groupings and affinities between investor types and deal categories.
 
-```mermaid
-graph TD
-    LP1["Pension Fund"] --- LP2["Sovereign Wealth"]
-    LP2 --- LP3["Insurance Co"]
-    LP1 --- LP3
-    
-    LP4["Family Office A"] --- LP5["Family Office B"]
-    LP5 --- LP6["HNWI Group"]
-    LP4 --- LP6
-    
-    LP7["Opportunity Fund"] --- LP8["Private Equity"]
-    LP8 --- LP9["Venture Capital"]
-    LP7 --- LP9
-    
-    LP3 --- LP4
-    LP6 --- LP7
-    
-    D1["Value-Add Multifamily"]
-    D2["Core Office"]
-    D3["Development JV"]
-    D4["Opportunistic Retail"]
-    
-    LP1 --- D2
-    LP2 --- D2
-    LP3 --- D1
-    LP4 --- D1
-    LP5 --- D1
-    LP6 --- D3
-    LP7 --- D3
-    LP8 --- D4
-    LP9 --- D4
-    
-    classDef institutional fill:#c4e0ff,stroke:#0066cc
-    classDef family fill:#ffe0b3,stroke:#cc7700
-    classDef opportunity fill:#ffc2c2,stroke:#cc0000
-    classDef deals fill:#e0ffe0,stroke:#008800
-    
-    class LP1,LP2,LP3 institutional
-    class LP4,LP5,LP6 family
-    class LP7,LP8,LP9 opportunity
-    class D1,D2,D3,D4 deals
-```
+<div class="diagram-container">
+  <img src="/images/diagrams/lp-clustering.svg" alt="LP Clustering by Investment Preferences Diagram" />
+</div>
 
 This clustering visualization shows how different types of investors naturally gravitate toward specific deal types. Institutional investors (blue) prefer stable core office properties, family offices (orange) favor value-add multifamily, while opportunity investors (red) target higher-risk development JVs and opportunistic retail. This analysis enables more targeted matching and outreach strategies.
 

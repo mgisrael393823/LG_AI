@@ -16,39 +16,9 @@ Advanced reporting platform with automated data aggregation, AI-generated narrat
 
 The following diagram illustrates the comprehensive workflow for AI-enhanced investor reporting, showing how data is transformed into personalized investor communications.
 
-```mermaid
-flowchart TD
-    A1["Aggregate financials"] --> A2["Aggregate market stats"]
-    A2 --> A3["Aggregate operational data"]
-    A3 --> A4["Data warehouse storage"]
-    A4 --> A5["Automated pipelines"]
-    A5 --> B1["Standardized templates"]
-    B1 --> B2["NLG drafts narratives"]
-    B2 --> B3["Market outlook content"]
-    B3 --> B4["Portfolio updates"]
-    B4 --> B5["Final reports"]
-    B5 --> C1["Online portals for LPs"]
-    C1 --> C2["Real-time KPIs"]
-    C2 --> C3["Customizable views"]
-    C3 --> C4["Project/portfolio views"]
-    C4 --> D1["Personalized highlights"]
-    D1 --> D2["Track usage metrics"]
-    D2 --> D3["Identify engaged investors"]
-    D2 --> D4["Identify non-engaged investors"]
-    D3 --> D5["Tailor communications"]
-    D4 --> D5
-    D5 --> B2
-    
-    classDef data fill:#e0f0ff,stroke:#3080e0
-    classDef reports fill:#e0ffe0,stroke:#30a030
-    classDef portals fill:#fff0e0,stroke:#e08030
-    classDef analysis fill:#f0e0ff,stroke:#8030e0
-    
-    class A1,A2,A3,A4,A5 data
-    class B1,B2,B3,B4,B5 reports
-    class C1,C2,C3,C4 portals
-    class D1,D2,D3,D4,D5 analysis
-```
+<div class="diagram-container">
+  <img src="/images/diagrams/investor-reporting-process.svg" alt="AI-Enhanced Investor Reporting Process Diagram" />
+</div>
 
 This diagram illustrates the end-to-end process for AI-enhanced investor reporting. It begins with comprehensive data aggregation from financial, market, and operational sources into a centralized data warehouse with automated processing pipelines. The report generation phase leverages natural language generation (NLG) to create narrative content and standardized reports. These are delivered through interactive online portals that provide real-time KPIs and customizable views. The final phase analyzes investor engagement with reports to identify both highly engaged and disengaged investors, allowing for tailored communications. A continuous feedback loop optimizes content generation based on engagement metrics, ensuring reports become increasingly relevant to each investor's interests.
 

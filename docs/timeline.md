@@ -6,32 +6,9 @@ This page outlines DISRVPT VENTURES' phased approach to implementing the AI tran
 
 The following Gantt chart provides a detailed timeline for the AI implementation roadmap, showing key tasks, dependencies, and milestones across the three implementation phases.
 
-```mermaid
-gantt
-    title AI Implementation Roadmap
-    dateFormat YYYY-MM-DD
-    
-    section Immediate (90 Days)
-    Technology Audit           :a1, 2025-03-19, 30d
-    Standardize LP Data        :a2, after a1, 30d
-    Data Governance Framework  :a3, after a1, 45d
-    
-    section Medium-Term (3-6 Months)
-    LP Matching Platform       :b1, after a2, 60d
-    Market Analytics Dashboards:b2, after a3, 45d
-    AI-Driven Financial Models :b3, after a3, 60d
-    
-    section Long-Term (6-12 Months)
-    Unified Decision Support   :c1, after b1, 90d
-    IoT Predictive Maintenance :c2, after b2, 120d
-    Interactive Investor Portals:c3, after b3, 75d
-    
-    section Ongoing
-    Team Training              :d1, 2025-03-19, 180d
-    RACI Implementation        :d2, after a3, 45d
-    Data Quality Initiatives   :d3, after a3, 90d
-    KPI Tracking & Refinement  :d4, after b1, 180d
-```
+<div class="diagram-container">
+  <img src="/images/diagrams/implementation-timeline.svg" alt="AI Implementation Roadmap Timeline" />
+</div>
 
 This Gantt chart illustrates the phased implementation approach for the AI transformation initiatives. The timeline is divided into immediate (90-day), medium-term (3-6 month), and long-term (6-12 month) phases, with clear dependencies between tasks. Ongoing activities span multiple phases to ensure continuous improvement and adoption. Key milestones mark the completion of each phase, providing clear checkpoints for progress evaluation.
 

@@ -1,0 +1,8 @@
+lp-identification-flow.svg: https://www.mermaidchart.com/raw/7dde97d9-fda2-4f42-a812-e96e078e11d5?theme=light&version=v0.1&format=svg
+lp-clustering.svg: https://www.mermaidchart.com/raw/84f7ee75-d192-4c3f-baa8-f13890a0525e?theme=light&version=v0.1&format=svg
+deal-pipeline-process.svg: https://www.mermaidchart.com/raw/9fdbaad7-0f71-4b3d-b938-9bfd09481e3b?theme=light&version=v0.1&format=svg
+financial-modeling-process.svg: https://www.mermaidchart.com/raw/51201aee-9c5e-4adc-8489-9eadcf6bc027?theme=light&version=v0.1&format=svg
+investor-relationship-process.svg: https://www.mermaidchart.com/raw/71a56c29-1afd-40da-89d5-ea32390ca290?theme=light&version=v0.1&format=svg
+asset-management-process.svg: https://www.mermaidchart.com/raw/debd4ddf-56b3-4ac9-b785-003eab9185cf?theme=light&version=v0.1&format=svg
+investor-reporting-process.svg: https://www.mermaidchart.com/raw/e2f4ed0f-f168-4fe1-8edf-5495b96e0f12?theme=light&version=v0.1&format=svg
+implementation-timeline.svg: https://www.mermaidchart.com/raw/1474609e-2910-40bd-87b9-4ff64149565a?theme=light&version=v0.1&format=svg

@@ -4,22 +4,9 @@
 
 The following diagram illustrates the AI-enhanced deal pipeline management workflow, showing how deals are processed, evaluated, and tracked through the system.
 
-```mermaid
-flowchart TD
-    A["Aggregate deal data"] --> B["Standardize attributes"]
-    B --> C{"Initial Screening"}
-    C -->|Meets criteria| D["Passes filter"]
-    C -->|Fails criteria| F["Rejected"]
-    D --> G["Score against LP preferences"]
-    G --> H["Rank by strategic focus"]
-    H --> I["Factor market growth"]
-    I --> J["Dashboard with status"]
-    J --> K["Track conversion rates"]
-    
-    classDef default fill:#e0f0f0,stroke:#2070a0
-    classDef decision fill:#ffe0e0,stroke:#c05050
-    class C decision
-```
+<div class="diagram-container">
+  <img src="/images/diagrams/deal-pipeline-process.svg" alt="Deal Pipeline Management Process Diagram" />
+</div>
 
 This diagram shows the standardized process for deal evaluation and pipeline management. The system aggregates and standardizes deal data before applying an initial screening filter. Qualified deals then progress through multiple scoring and ranking steps that factor in LP preferences, strategic focus, and market conditions. The dashboard tracks conversion rates to continuously improve the screening criteria and matching algorithms.
 
