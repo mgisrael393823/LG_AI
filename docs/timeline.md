@@ -2,6 +2,63 @@
 
 This page outlines DISRVPT VENTURES' phased approach to implementing the AI transformation initiatives for LG GROUP.
 
+## AI Implementation Roadmap Timeline
+
+The following Gantt chart provides a detailed timeline for the AI implementation roadmap, showing key tasks, dependencies, and milestones across the three implementation phases.
+
+<div class="mermaid-wrapper implementation-timeline-diagram">
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'fontSize': '16px',
+    'fontFamily': 'system-ui',
+    'primaryTextColor': '#333'
+  }
+}}%%
+gantt
+    title AI Implementation Roadmap
+    dateFormat YYYY-MM-DD
+    axisFormat %b %y
+    
+    section Immediate (90 Days)
+    Technology Audit           :immediate, a1, 2025-03-19, 30d
+    Standardize LP Data        :immediate, a2, after a1, 30d
+    Data Governance Framework  :immediate, a3, after a1, 45d
+    
+    section Medium-Term (3-6 Months)
+    LP Matching Platform       :medium, b1, after a2, 60d
+    Market Analytics Dashboards:medium, b2, after a3, 45d
+    AI-Driven Financial Models :medium, b3, after a3, 60d
+    
+    section Long-Term (6-12 Months)
+    Unified Decision Support   :long, c1, after b1, 90d
+    IoT Predictive Maintenance :long, c2, after b2, 120d
+    Interactive Investor Portals:long, c3, after b3, 75d
+    
+    section Ongoing
+    Team Training              :ongoing, d1, 2025-03-19, 180d
+    RACI Implementation        :ongoing, d2, after a3, 45d
+    Data Quality Initiatives   :ongoing, d3, after a3, 90d
+    KPI Tracking & Refinement  :ongoing, d4, after b1, 180d
+    
+    %% Milestone markers
+    section Milestones
+    Phase 1 Complete          :milestone, m1, 2025-06-18, 0d
+    Phase 2 Complete          :milestone, m2, 2025-09-17, 0d
+    Phase 3 Complete          :milestone, m3, 2026-01-15, 0d
+    
+    %% Custom styling with CSS classes
+    classDef immediate fill:#4472C4,stroke:#2060a0,color:white
+    classDef medium fill:#ED7D31,stroke:#c05020,color:white
+    classDef long fill:#70AD47,stroke:#508030,color:white
+    classDef ongoing fill:#7030A0,stroke:#50207A,color:white
+    classDef milestone fill:#000000,stroke:#000000,color:white
+```
+</div>
+
+This Gantt chart illustrates the phased implementation approach for the AI transformation initiatives. The timeline is divided into immediate (90-day), medium-term (3-6 month), and long-term (6-12 month) phases, with clear dependencies between tasks. Ongoing activities span multiple phases to ensure continuous improvement and adoption. Key milestones mark the completion of each phase, providing clear checkpoints for progress evaluation.
+
 ## Implementation Roadmap
 
 <div class="gantt-chart">

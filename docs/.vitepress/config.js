@@ -30,6 +30,8 @@ export default defineConfig({
           { text: 'Market Analysis', link: '/implementation-areas/market-analysis' },
           { text: 'Financial Modeling', link: '/implementation-areas/financial-modeling' },
           { text: 'Investor Management', link: '/implementation-areas/investor-management' },
+          { text: 'Asset Management', link: '/implementation-areas/asset-management' },
+          { text: 'Investor Reporting', link: '/implementation-areas/investor-reporting' },
         ]
       }
     ]
